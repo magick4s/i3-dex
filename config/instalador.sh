@@ -69,10 +69,8 @@ echo "== > Instalando configuração"
 	mkdir $HOME/.local/share/fonts
     cp feather.ttf $HOME/.local/share/fonts
     mkdir $HOME/.vim
-	mkdir $HOME/bundle
 	git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 	cp .vimrc $HOME
 
 echo "== > Finalizando"
-    i3-msg restart
-exit
+	notify-send "Instalação finalizada"

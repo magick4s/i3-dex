@@ -24,7 +24,7 @@
 ```sudo loadkeys br-abnt2```
 
 ## ⚙ 6° Passo: Execute o script de instalação e depois reinicie o sistema:
-```bash <(curl -s https://raw.githubusercontent.com/jirrezdex/i3-dex/master/config/instalar.sh)```  
+```bash <(curl -s https://raw.githubusercontent.com/jirrezdex/i3-dex/master/config/instalador.sh)```  
 ```reboot```
 
 ## ⚙ Passos adicionais:

@@ -1,0 +1,233 @@
+# jirrezdex@gmail.com
+# Jirrez Matheus
+
+################ Básico
+set $mod Mod4
+
+################ Fonte de título para janela
+font pango:Fira Sans
+
+################ Use $Mod+Mouse para arrastar janelas flutuantes
+floating_modifier $mod
+
+################ Iniciar Terminal
+bindsym $mod+Return exec termite
+
+################ Fechar janela
+bindsym $mod+Shift+q kill
+
+################ Mudar foco
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+semicolon focus right
+
+################ Como alternativa, você pode usar as teclas do cursor
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+################ Mover janela focada
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+semicolon move right
+
+################ Como alternativa, você pode usar as teclas do cursor
+bindsym $mod+Shift+Left move left 343px
+bindsym $mod+Shift+Down move down 210px
+bindsym $mod+Shift+Up move up 210px
+bindsym $mod+Shift+Right move right 343px
+
+################ Dividir na orientação horizontal
+bindsym $mod+h split h
+
+################ Dividir na orientação vertical
+bindsym $mod+v split v
+
+################ Entrar em modo fullscreen com janela focada
+bindsym $mod+f fullscreen toggle
+
+################ Flutuante
+bindsym $mod+Shift+space floating toggle
+
+################ Mudar o foco entre janelas e janelas flutuantes
+bindsym $mod+space focus mode_toggle
+
+################ Focar container pai
+bindsym $mod+a focus parent
+
+################ Nomes dos Workspaces
+set $ws1 "1: Terminal"
+set $ws2 "2: Navegador"
+set $ws3 "3: Visualizador"
+set $ws4 "4: Reprodutor"
+set $ws5 "5: Chat"
+set $ws6 "6: Email"
+set $ws7 "7: Escritório"
+set $ws8 "8: Editor"
+set $ws9 "9: Pessoal"
+set $ws10 "10: Outros"
+
+################ Workspaces
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
+################ Navegação - Próximo/Voltar
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
+
+################ Mover janela focada para determinado Workspace
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+
+################ Recarregar arquivo de configuração
+bindsym $mod+Shift+c reload
+
+################ Recarregar I3-Gaps
+bindsym $mod+Shift+r restart
+
+################ Gaps
+for_window [class="^.*"] border pixel 0
+gaps inner 5
+gaps outer 5
+set $mode_gaps Gaps: (o) outer, (i)
+set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+bindsym $mod+Shift+g mode "$mode_gaps"
+mode "$mode_gaps" {
+        bindsym o      mode "$mode_gaps_outer"
+        bindsym i      mode "$mode_gaps_inner"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+mode "$mode_gaps_inner" {
+        bindsym plus  gaps inner current plus 5
+        bindsym minus gaps inner current minus 5
+        bindsym 0     gaps inner current set 0
+
+        bindsym Shift+plus  gaps inner all plus 5
+        bindsym Shift+minus gaps inner all minus 5
+        bindsym Shift+0     gaps inner all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+mode "$mode_gaps_outer" {
+        bindsym plus  gaps outer current plus 5
+        bindsym minus gaps outer current minus 5
+        bindsym 0     gaps outer current set 0
+
+        bindsym Shift+plus  gaps outer all plus 5
+        bindsym Shift+minus gaps outer all minus 5
+        bindsym Shift+0     gaps outer all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+# Classe                Borda  	Background Texto   Indicador Borda filho
+client.focused          #0F111A #0F111A    #FFFFFF #0F111A   #0F111A
+client.focused_inactive #0F111A #0F111A    #FFFFFF #0F111A   #0F111A
+client.unfocused        #0F111A #0F111A    #FFFFFF #0F111A   #0F111A
+client.urgent           #0F111A #0F111A    #FFFFFF #0F111A   #0F111A
+client.placeholder      #0F111A #0F111A    #FFFFFF #0F111A   #0F111A
+client.background       #0F111A
+
+################ Redimensionar janela, você também pode usar o mouse para isto
+mode "resize" {
+        ################ Essas ligações são acionadas assim que você entrar no modo redimensionamento
+        ################ Pressionar para a esquerda ou direita para reduzir ou aumentar a largura da janela
+        ################ Pressionar para cima ou para baixo para diminuir ou aumentar a altura da janela
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym semicolon resize grow width 10 px or 10 ppt
+        ################ Mesmas ligações, mas para as teclas de setas
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+        ################ Voltar ao normal: Enter, Escape ou $Mod+R
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+bindsym $mod+r mode "resize"
+
+################ Definições
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="bubble"] floating enable
+for_window [window_role="task_dialog"] floating enable
+for_window [window_role="Preferences"] floating enable
+for_window [window_type="dialog"] floating enable
+for_window [window_type="menu"] floating enable
+for_window [window_type="GtkFileChooserDialog"] floating enable
+for_window [window_type="Soffice"] floating enable
+for_window [class="Google-chrome" title="Save File"] floating enable
+
+        ################ Borda
+        for_window [class="Termite"] border pixel 15
+
+	################ Mover para workspace
+        for_window [class="Pqiv"] move to workspace $WS4
+        for_window [class="Spotify"] move to workspace $WS5
+
+        ################ Workspace
+        assign [class="(Termite)"] $ws1
+        assign [class="(Firefox)"] $ws2
+        assign [class="(Pqiv|pqiv)"] $ws3
+        assign [class="(mpv|Spotify)"] $ws4
+        assign [class="(Telegram)"] $ws5
+        assign [class="(Thunderbird)"] $ws6
+        assign [class="(LibreOffice|libreoffice|libreoffice-startcenter)"] $ws7
+        assign [class="(Gimp|Blender|Inkscape|Rawtherapee)"] $ws8
+        assign [class="(Steam|Thunderbird)"] $ws9
+        assign [class="()"] $ws10
+
+################ Controle de brilho
+bindsym XF86MonBrightnessUp exec light -A 5
+bindsym XF86MonBrightnessDown exec light -U 5
+
+################ Controle de volume
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%
+bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
+
+################ Controle de som
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
+################ Inicialização
+exec --no-startup-id pactl set-sink-volume 0 40%
+exec_always --no-startup-id feh --bg-scale $HOME/.config/wallpaper/wallpaper.png
+exec_always --no-startup-id $HOME/.config/desenvolvedor/monitores.sh
+exec_always --no-startup-id $HOME/.config/scripts/polybar.sh
+exec_always --no-startup-id compton -b
+exec_always --no-startup-id dunst &
+
+################ Comandos F1,2,3,4,5,6,7,8,9,10,11,12
+bindsym Control+F11 exec termite -e $HOME/.config/instalar.sh
+bindsym Control+F12 exec termite -e $HOME/.config/desenvolvedor/github.sh
+
+################ Comandos
+bindsym Print exec --no-startup-id $HOME/.config/scripts/screenshot.sh
+bindsym Control+Print exec --no-startup-id $HOME/.config/scripts/screencast.sh

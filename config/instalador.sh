@@ -65,7 +65,7 @@ echo "== > Medidas de segurança"
 	sudo rm /ect/xdg/termite
 echo "== > Instalando configuração"
     cp -r {instalador.sh,compton,desenvolvedor,dunst,i3,polybar,ranger,rofi,scripts,wallpaper} $HOME/.config
-    cp -r termite /etc/xdg
+    sudo cp -r termite /etc/xdg
 	mkdir $HOME/.local/share/fonts
     cp feather.ttf $HOME/.local/share/fonts
     mkdir $HOME/.vim

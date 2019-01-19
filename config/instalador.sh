@@ -61,3 +61,18 @@ echo "== > Fornecendo permissões"
 	chmod +x scripts/*
 
 echo "== > Medidas de segurança"
+	rm -dR $HOME/.config/{instalador.sh,compton,desenvolvedor,dunst,i3,polybar,ranger,rofi,scripts,wallpaper}
+	sudo rm /ect/xdg/termite
+echo "== > Instalando configuração"
+    cp -r {instalador.sh,compton,desenvolvedor,dunst,i3,polybar,ranger,rofi,scripts,wallpaper} $HOME/.config
+    cp -r termite /etc/xdg
+	mkdir $HOME/.local/share/fonts
+    cp feather.ttf $HOME/.local/share/fonts
+    mkdir $HOME/.vim
+	mkdir $HOME/bundle
+	git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
+	cp .vimrc $HOME
+
+echo "== > Finalizando"
+    i3-msg restart
+exit

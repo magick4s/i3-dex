@@ -7,7 +7,7 @@
 * Requisitos: Arch Linux e conexão cabeada:
 
 ## ⚙ 1° Passo: Logue como root:
-* ...
+```...```  
 
 ## ⚙ 2° Passo: Deixe o teclado em pt_BR:
 ```loadkeys br-abnt2```  

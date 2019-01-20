@@ -63,17 +63,17 @@ echo "== > Fornecendo permissões"
 echo "== > Medidas de segurança"
 	rm -dR $HOME/{.vimrc,.xinitrc}
 	rm -dR $HOME/.config/{instalador.sh,compton,desenvolvedor,dunst,i3,polybar,ranger,rofi,scripts,wallpaper}
-	sudo rm /ect/xdg/termite
+	sudo rm /etc/xdg/termite
 
 echo "== > Instalando configuração"
-    cp -r {instalador.sh,compton,desenvolvedor,dunst,i3,polybar,ranger,rofi,scripts,wallpaper} $HOME/.config
-    sudo cp -r termite /etc/xdg
-	mkdir $HOME/.local/share/fonts
-    cp feather.ttf $HOME/.local/share/fonts
-    mkdir $HOME/.vim
-	git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
+	mkdir $HOME/.vim
 	cp .vimrc $HOME
+	git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 	echo "exec i3" > $HOME/.xinitrc
+	mkdir $HOME/.local/share/fonts
+	cp feather.ttf $HOME/.local/share/fonts
+	cp -r {instalador.sh,compton,desenvolvedor,dunst,i3,polybar,ranger,rofi,scripts,wallpaper} $HOME/.config
+	sudo cp -r termite /etc/xdg
 
 echo "== > Finalizando"
 	notify-send "Instalação finalizada"

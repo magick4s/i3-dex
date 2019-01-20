@@ -11,7 +11,6 @@
 
 ## ⚙ 2° Passo: Deixe o teclado em pt_BR:
 ```loadkeys br-abnt2```  
-```localectl set-x11-keymap br abnt2```
 
 ## ⚙ 3° Passo: Adicione seu usuário ao grupo sudoers:
 ```nano /etc/sudoers```
@@ -27,15 +26,11 @@
 ```bash <(curl -s https://raw.githubusercontent.com/jirrezdex/i3-dex/master/config/instalador.sh)```  
 ```reboot```
 
+##### Sistema de login: Digite seu usuário e senha, após ter feito isto, dê "startx"
+
 ## ⚙ Passos adicionais:
-### Autologin
-```sudo mkdir /etc/sddm.conf.d```  
-```sudo nano /etc/sddm.conf.d/autologin.conf```  
-```
-[Autologin]  
-User=<SEU USUÁRIO>  
-Session=i3.desktop
-```  
+### Teclado pt-br
+```localectl set-x11-keymap br abnt2```  
 
 ### WiFi
 ```nmcli d wifi list```  

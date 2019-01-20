@@ -61,8 +61,10 @@ echo "== > Fornecendo permissões"
 	chmod +x scripts/*
 
 echo "== > Medidas de segurança"
+	rm -dR $HOME/{.vimrc,.xinitrc}
 	rm -dR $HOME/.config/{instalador.sh,compton,desenvolvedor,dunst,i3,polybar,ranger,rofi,scripts,wallpaper}
 	sudo rm /ect/xdg/termite
+
 echo "== > Instalando configuração"
     cp -r {instalador.sh,compton,desenvolvedor,dunst,i3,polybar,ranger,rofi,scripts,wallpaper} $HOME/.config
     sudo cp -r termite /etc/xdg
@@ -71,6 +73,7 @@ echo "== > Instalando configuração"
     mkdir $HOME/.vim
 	git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 	cp .vimrc $HOME
+	echo "exec i3" > $HOME/.xinitrc
 
 echo "== > Finalizando"
 	notify-send "Instalação finalizada"

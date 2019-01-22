@@ -186,8 +186,8 @@ for_window [class="Google-chrome" title="Save File"] floating enable
         for_window [class="Termite"] border pixel 15
 
 	################ Mover para workspace
-        for_window [class="Pqiv"] move to workspace $WS4
-        for_window [class="Spotify"] move to workspace $WS5
+        for_window [class="Pqiv"] move to workspace $WS3
+        for_window [class="Spotify"] move to workspace $WS4
 
         ################ Workspace
         assign [class="(Termite)"] $ws1

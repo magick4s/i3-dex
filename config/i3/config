@@ -4,17 +4,17 @@
 ################ Básico
 set $mod Mod4
 
-################ Iniciar Terminal
-bindsym $mod+Return exec termite
-
-################ Fechar janela
-bindsym $mod+Shift+q kill
-
 ################ Fonte de título para janela
 font pango:Fira Sans
 
 ################ Use $Mod+Mouse para arrastar janelas flutuantes
 floating_modifier $mod
+
+################ Iniciar Terminal
+bindsym $mod+Return exec termite
+
+################ Fechar janela
+bindsym $mod+Shift+q kill
 
 ################ Mudar foco
 bindsym $mod+j focus left
@@ -98,36 +98,6 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
-################ Definições
-for_window [window_role="pop-up"] floating enable
-for_window [window_role="bubble"] floating enable
-for_window [window_role="task_dialog"] floating enable
-for_window [window_role="Preferences"] floating enable
-for_window [window_type="dialog"] floating enable
-for_window [window_type="menu"] floating enable
-for_window [window_type="GtkFileChooserDialog"] floating enable
-for_window [window_type="Soffice"] floating enable
-for_window [class="Firefox" title="Save File"] floating enable
-
-################ Borda
-        for_window [class="Termite"] border pixel 15
-
-################ Mover para workspace
-for_window [class="Pqiv"] move to workspace $WS3
-for_window [class="Spotify"] move to workspace $WS4
-
-################ Workspace
-assign [class="(Termite)"] $ws1
-assign [class="(Code)"] $ws2
-assign [class="(Firefox)"] $ws3
-assign [class="(Pqiv|pqiv)"] $ws4
-assign [class="(mpv|Spotify)"] $ws5
-assign [class="(Telegram)"] $ws6
-assign [class="(libreoffice-startcenter|libreoffice-writer|libreoffice-draw|libreoffice-presentation|libreoffice-impress|libreoffice-calc)"] $ws7
-assign [class="(Gimp|Blender|Inkscape|Rawtherapee)"] $ws8
-assign [class="(Steam|Thunderbird)"] $ws9
-assign [class="()"] $ws10
-
 ################ Recarregar arquivo de configuração
 bindsym $mod+Shift+c reload
 
@@ -201,6 +171,36 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+################ Definições
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="bubble"] floating enable
+for_window [window_role="task_dialog"] floating enable
+for_window [window_role="Preferences"] floating enable
+for_window [window_type="dialog"] floating enable
+for_window [window_type="menu"] floating enable
+for_window [window_type="GtkFileChooserDialog"] floating enable
+for_window [window_type="Soffice"] floating enable
+for_window [class="Firefox" title="Savar arquivo"] floating enable
+
+################ Borda
+for_window [class="Termite"] border pixel 15
+
+################ Mover para workspace
+for_window [class="Pqiv"] move to workspace $WS4
+for_window [class="Spotify"] move to workspace $WS5
+
+################ Workspace
+assign [class="(Termite)"] $ws1
+assign [class="(Code)"] $ws2
+assign [class="(Firefox)"] $ws3
+assign [class="(Pqiv|pqiv)"] $ws4
+assign [class="(mpv|Spotify)"] $ws5
+assign [class="(Telegram)"] $ws6
+assign [class="(libreoffice-startcenter|libreoffice-writer|libreoffice-draw|libreoffice-presentation|libreoffice-impress|libreoffice-calc)"] $ws7
+assign [class="(Gimp|Blender|Inkscape|Rawtherapee)"] $ws8
+assign [class="(Steam|Thunderbird)"] $ws9
+assign [class="()"] $ws10
+
 ################ Controle de brilho
 bindsym XF86MonBrightnessUp exec light -A 5
 bindsym XF86MonBrightnessDown exec light -U 5
@@ -225,7 +225,7 @@ exec_always --no-startup-id compton -b
 exec_always --no-startup-id dunst &
 
 ################ Comandos F1,2,3,4,5,6,7,8,9,10,11,12
-bindsym Control+F11 exec termite -e $HOME/.config/instalador.sh
+bindsym Control+F11 exec termite -e $HOME/.config/instalar.sh
 bindsym Control+F12 exec termite -e $HOME/.config/desenvolvedor/github.sh
 
 ################ Comandos

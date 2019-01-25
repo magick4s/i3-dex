@@ -35,12 +35,11 @@ echo "== > Verificando"
     cd config
 
 echo "== > Medidas de segurança"
-    sudo rm -dR {.vimrc,instalador.sh,compton,desenvolvedor,dunst,i3,polybar,ranger,rofi,scripts,wallpaper,termite}
+    sudo rm -dR {.vimrc,instalador.sh,compton,desenvolvedor,dunst,i3,polybar,ranger,rofi,scripts,termite,wallpaper}
 
 echo "== > Copiando arquivos"
 	cp $HOME/.vimrc $HOME/GitHub/i3-dex/config
-    cp -r $HOME/.config/{instalador.sh,compton,desenvolvedor,dunst,i3,polybar,ranger,rofi,scripts,wallpaper} $HOME/GitHub/i3-dex/config
-    sudo cp -r /etc/xdg/termite $HOME/GitHub/i3-dex/config
+    cp -r $HOME/.config/{instalador.sh,compton,desenvolvedor,dunst,i3,polybar,ranger,rofi,scripts,termite,wallpaper} $HOME/GitHub/i3-dex/config
     notify-send "Cópia concluída"
 
 if pergunta "== > Deseja fazer upload para o GitHub?" S; then

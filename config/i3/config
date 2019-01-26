@@ -185,16 +185,12 @@ for_window [class="Firefox" title="Savar arquivo"] floating enable
 ################ Borda
 for_window [class="Termite"] border pixel 15
 
-################ Mover para workspace
-for_window [class="Pqiv"] move to workspace $WS4
-for_window [class="Spotify"] move to workspace $WS5
-
 ################ Workspace
 assign [class="(Termite)"] $ws1
-assign [class="(Code)"] $ws2
+assign [class="(Code|sun-awt-X11-XFramePeer|jetbrains-studio)"] $ws2
 assign [class="(Firefox)"] $ws3
 assign [class="(Pqiv|pqiv)"] $ws4
-assign [class="(mpv|Spotify)"] $ws5
+assign [class="(mpv)"] $ws5
 assign [class="(Telegram)"] $ws6
 assign [class="(libreoffice-startcenter|libreoffice-writer|libreoffice-draw|libreoffice-presentation|libreoffice-impress|libreoffice-calc)"] $ws7
 assign [class="(Gimp|Blender|Inkscape|Rawtherapee)"] $ws8

@@ -30,7 +30,7 @@ pergunta() {
 echo "== > Olá "$USER"."
 
 echo "== > Instalando pacotes essenciais"
-	sudo pacman -S --needed --noconfirm xorg-xinit xorg-server xorg-xrandr i3-gaps rofi compton termite ranger firefox vim git go maim ffmpeg pulseaudio pulseaudio-alsa alsa-utils xclip libnotify dunst compton ttf-dejavu ttf-fira-sans ttf-fira-mono feh terminus-font playerctl 1> /dev/null 2> /dev/null
+	sudo pacman -S --needed --noconfirm cmus xorg-xinit xorg-server xorg-xrandr i3-gaps rofi compton termite ranger firefox vim git go maim ffmpeg pulseaudio pulseaudio-alsa alsa-utils xclip libnotify dunst compton ttf-dejavu ttf-fira-sans ttf-fira-mono feh terminus-font playerctl 1> /dev/null 2> /dev/null
 	git clone https://aur.archlinux.org/yay.git
 	cd yay
 	makepkg -si

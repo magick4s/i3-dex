@@ -36,9 +36,9 @@ som = #2EFE9A
 voltar =#2EFE9A
 tocar-parar = #2EFE9A
 avancar =#2EFE9A
-musica = #2EFE9A
+cmus = #2EFE9A
 janela = #339AF0
-cpu = #4000FF
+cpu = #FF00FF
 memoria = #8A0829
 arquivos = #00FFBF
 wireless = #00FF00
@@ -90,7 +90,7 @@ module-margin-left = 0
 module-margin-right = 0
 font-0 = Fira Sans:size=10:antialias=true;0;0
 font-1 = feather:pixelsize=10
-modules-left = som voltar tocar-parar avancar musica
+modules-left = som voltar tocar-parar avancar cmus
 modules-center = janela
 modules-right = cpu memoria arquivos wireless usuario controle
 cursor-click = pointer
@@ -105,7 +105,7 @@ content-padding = 2
 content-foreground = ${cores.menu}
 click-left = exec rofi -show run -display-run "I3 Dex"
 
-################ I3
+################ I3
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
@@ -124,14 +124,14 @@ ws-icon-9 = 10;OUTROS
 strip-wsnumbers = true
 label-mode = %mode%
 label-mode-padding = 1
-label-focused = %name%
+label-focused =  %name%
 label-focused-padding = 1
 label-focused-foreground = ${cores.focado}
-label-unfocused = %name%
+label-unfocused =  %name%
 label-unfocused-padding = 1
-label-visible = %name%
+label-visible =  %name%
 label-visible-padding = 1
-label-urgent = %name%
+label-urgent =  %name%
 label-urgent-padding = 1
 label-urgent-foreground = ${cores.urgente}
 
@@ -225,14 +225,14 @@ type = custom/text
 content = 
 content-padding = 2
 content-foreground = ${cores.voltar}
-click-left = playerctl previous
+click-left = cmus-remote --prev
 
 ################ Controlador play & pause
 [module/tocar-parar]
 type = custom/text
 content = 
 content-foreground = ${cores.tocar-parar}
-click-left = playerctl play-pause
+click-left = cmus-remote --pause
 
 ################ Controlador avançar
 [module/avancar]
@@ -240,16 +240,17 @@ type = custom/text
 content = 
 content-padding = 2
 content-foreground = ${cores.avancar}
-click-left = playerctl next
+click-left = cmus-remote --next
 
-################ Música
-[module/musica]
+################ Cmus
+[module/cmus]
 type = custom/script
 label = %output%
 label-padding = 2
-label-foreground = ${cores.musica}
 label-maxlen = 50
-exec = $HOME/.config/scripts/musica.sh
+label-foreground = ${cores.cmus}
+interval = 0.5
+exec = $HOME/.config/scripts/cmus.sh
 
 ################ Janela
 [module/janela]

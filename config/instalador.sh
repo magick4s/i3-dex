@@ -30,7 +30,7 @@ pergunta() {
 echo "== > Olá "$USER"."
 
 echo "== > Instalando pacotes essenciais"
-	sudo pacman -S --needed --noconfirm cmus xorg-xinit xorg-server xorg-xrandr i3-gaps rofi termite ranger firefox vim git go maim ffmpeg pulseaudio pulseaudio-alsa alsa-utils xclip libnotify dunst ttf-dejavu ttf-fira-sans ttf-fira-mono feh terminus-font playerctl 1> /dev/null 2> /dev/null
+	sudo pacman -S --needed --noconfirm cmus compton xorg-xinit xorg-server xorg-xrandr i3-gaps rofi termite ranger firefox vim git go maim ffmpeg pulseaudio pulseaudio-alsa alsa-utils xclip libnotify dunst ttf-dejavu ttf-fira-sans ttf-fira-mono feh terminus-font playerctl 1> /dev/null 2> /dev/null
 	git clone https://aur.archlinux.org/yay.git
 	cd yay
 	makepkg -si
@@ -62,7 +62,7 @@ echo "== > Fornecendo permissões"
 
 echo "== > Medidas de segurança"
 	rm -dR $HOME/{.vimrc,.xinitrc}
-	rm -dR $HOME/.config/{instalador.sh,desenvolvedor,dunst,i3,polybar,ranger,rofi,scripts,termite,wallpaper}
+	rm -dR $HOME/.config/{instalador.sh,compton,desenvolvedor,dunst,i3,polybar,ranger,rofi,scripts,termite,wallpaper}
 
 echo "== > Instalando configuração"
 	mkdir $HOME/.vim
@@ -71,7 +71,7 @@ echo "== > Instalando configuração"
 	echo "exec i3" > $HOME/.xinitrc
 	mkdir $HOME/.local/share/fonts
 	cp feather.ttf $HOME/.local/share/fonts
-	cp -r {instalador.sh,desenvolvedor,dunst,i3,polybar,ranger,rofi,scripts,termite,wallpaper} $HOME/.config
+	cp -r {instalador.sh,compton,desenvolvedor,dunst,i3,polybar,ranger,rofi,scripts,termite,wallpaper} $HOME/.config
 
 if pergunta "== > Deseja instalar os pacotes extras?" S; then
 	sudo pacman --needed --noconfirm mpv libreoffice-fresh libreoffice-fresh-pt-br rawtherapee gimp blender inkscape thunderbird 1> /dev/null 2> /dev/null

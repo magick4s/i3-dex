@@ -217,8 +217,8 @@ exec --no-startup-id pactl set-sink-volume 0 40%
 exec_always --no-startup-id feh --bg-scale $HOME/.config/wallpaper/wallpaper.png
 exec_always --no-startup-id $HOME/.config/desenvolvedor/monitores.sh
 exec_always --no-startup-id $HOME/.config/scripts/polybar.sh
-exec_always --no-startup-id compton --config ~/.config/compton/compton.conf
-exec_always --no-startup-id dunst &
+exec_always --no-startup-id compton --config $HOME/.config/compton/compton.conf
+exec_always --no-startup-id dunst --config $HOME/.config/compton/dunstrc
 
 ################ Comandos F1,2,3,4,5,6,7,8,9,10,11,12
 bindsym Control+F11 exec termite -e $HOME/.config/instalador.sh

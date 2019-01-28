@@ -47,5 +47,5 @@ if pergunta "== > Deseja fazer upload para o GitHub?" S; then
     git add --all
     git commit
     git push -u origin master
-    notify-send "Arquivos upados"
+    notify-send "Arquivos upados" -i $HOME/.config/dunst/icones/github.png
 fi

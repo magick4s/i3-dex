@@ -30,7 +30,7 @@ pergunta() {
 echo "== > Olá "$USER"."
 
 echo "== > Instalando pacotes essenciais"
-	sudo pacman -S --needed --noconfirm cmus compton xorg-xinit xorg-server xorg-xrandr i3-gaps rofi termite ranger firefox vim git go maim ffmpeg pulseaudio pulseaudio-alsa alsa-utils xclip libnotify dunst ttf-dejavu ttf-fira-sans ttf-fira-mono feh terminus-font playerctl 1> /dev/null 2> /dev/null
+	sudo pacman -S --needed --noconfirm cmus w3m compton xorg-xinit xorg-server xorg-xrandr i3-gaps rofi termite ranger firefox vim git go maim ffmpeg pulseaudio pulseaudio-alsa alsa-utils xclip libnotify dunst ttf-dejavu ttf-fira-sans ttf-fira-mono feh terminus-font playerctl 1> /dev/null 2> /dev/null
 	git clone https://aur.archlinux.org/yay.git
 	cd yay
 	makepkg -si
@@ -83,4 +83,4 @@ if pergunta "== > Remover configuração do desenvolvedor? RECOMENDADO PARA TOTA
 fi
 
 echo "== > Finalizando"
-	notify-send "Instalação finalizada"
+	notify-send "Instalação finalizada" -i $HOME/.config/dunst/icones/instalador.png

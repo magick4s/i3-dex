@@ -27,22 +27,22 @@ pergunta() {
     done
 }
 
-echo -e "\e[33m\e[1m==> \e[39m\e[1mOlá "$USER"!"
+echo -e "\e[33m\e[1m==> \e[39m\e[1mOlá "$USER"!\e[0m"
 
-echo -e "\e[33m\e[1m==> \e[39m\e[1mVerificando"
+echo -e "\e[33m\e[1m==> \e[39m\e[1mVerificando\e[0m"
     cd $HOME/GitHub/i3-dex
     git pull
     cd config
 
-echo -e "\e[33m\e[1m==> \e[39m\e[1mMedidas de segurança"
+echo -e "\e[33m\e[1m==> \e[39m\e[1mMedidas de segurança\e[0m"
     sudo rm -dR {.vimrc,instalador.sh,compton,desenvolvedor,dunst,i3,polybar,ranger,rofi,scripts,termite,wallpaper}
 
-echo -e "\e[33m\e[1m==> \e[39m\e[1mCopiando arquivos"
+echo -e "\e[33m\e[1m==> \e[39m\e[1mCopiando arquivos\e[0m"
 	cp $HOME/.vimrc $HOME/GitHub/i3-dex/config
     cp -r $HOME/.config/{instalador.sh,compton,desenvolvedor,dunst,i3,polybar,ranger,rofi,scripts,termite,wallpaper} $HOME/GitHub/i3-dex/config
     notify-send "Cópia concluída"
 
-echo -e "\e[33m\e[1m==> \e[39m\e[1mDeseja fazer upload para o GitHub?"
+echo -e "\e[33m\e[1m==> \e[39m\e[1mDeseja fazer upload para o GitHub?\e[0m"
 if pergunta "S - Para sim || N - Para não ----" S; then
     cd $HOME/GitHub/i3-dex
     git add --all

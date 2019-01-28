@@ -30,13 +30,13 @@ pergunta() {
 echo "== > Olá "$USER"."
 
 echo "== > Instalando pacotes essenciais"
-	sudo pacman -S --needed --noconfirm cmus w3m compton xorg-xinit xorg-server xorg-xrandr i3-gaps rofi termite ranger firefox vim git go maim ffmpeg pulseaudio pulseaudio-alsa alsa-utils xclip libnotify dunst ttf-dejavu ttf-fira-sans ttf-fira-mono feh terminus-font playerctl 1> /dev/null 2> /dev/null
+	sudo pacman -S --needed --noconfirm cmus w3m compton xorg-xinit xorg-server xorg-xrandr i3-gaps rofi termite ranger firefox vim git go maim ffmpeg pulseaudio pulseaudio-alsa alsa-utils xclip libnotify dunst ttf-dejavu ttf-fira-sans ttf-fira-mono feh terminus-font playerctl
 	git clone https://aur.archlinux.org/yay.git
 	cd yay
 	makepkg -si
 	cd ..
 	sudo rm -dR yay
-	yay -S --needed --noconfirm polybar nerd-fonts-source-code-pro 1> /dev/null 2> /dev/null
+	yay -S --needed --noconfirm polybar nerd-fonts-source-code-pro
 
 echo "== > Habilitando serviços"
 	sudo systemctl enable dhcpcd.service
@@ -45,9 +45,9 @@ echo "== > Habilitando serviços"
 	sudo systemctl start NetworkManager
 
 echo "== > Criando diretórios"
-	mkdir $HOME/{Documentos,Downloads,GitHub,Imagens,Modelos,Música,Público,Vídeos,Área\ \de\ \trabalho}
-	mkdir $HOME/Imagens/Screenshots
-	mkdir $HOME/Vídeos/Screencasts
+	mkdir $HOME/{Documentos,Downloads,GitHub,Imagens,Modelos,Música,Público,Vídeos,Área\ \de\ \trabalho} 1> /dev/null 2> /dev/null
+	mkdir $HOME/Imagens/Screenshots 1> /dev/null 2> /dev/null
+	mkdir $HOME/Vídeos/Screencasts 1> /dev/null 2> /dev/null
 
 echo "== > Baixando I3 Dex"
 	cd $HOME/GitHub
@@ -61,21 +61,21 @@ echo "== > Fornecendo permissões"
 	chmod +x scripts/*
 
 echo "== > Medidas de segurança"
-	rm -dR $HOME/{.vimrc,.xinitrc}
+	rm -dR $HOME/{.vimrc,.xinitrc,.vim}
 	rm -dR $HOME/.config/{instalador.sh,compton,desenvolvedor,dunst,i3,polybar,ranger,rofi,scripts,termite,wallpaper}
 
 echo "== > Instalando configuração"
-	mkdir $HOME/.vim
+	mkdir $HOME/.vim 1> /dev/null 2> /dev/null
 	cp .vimrc $HOME
 	git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 	echo "exec i3" > $HOME/.xinitrc
-	mkdir $HOME/.local/share/fonts
-	cp feather.ttf $HOME/.local/share/fonts
+	mkdir $HOME/.local/share/fonts 1> /dev/null 2> /dev/null
+	cp feather.ttf $HOME/.local/share/fonts 1> /dev/null 2> /dev/null
 	cp -r {instalador.sh,compton,desenvolvedor,dunst,i3,polybar,ranger,rofi,scripts,termite,wallpaper} $HOME/.config
 
 if pergunta "== > Deseja instalar os pacotes extras?" S; then
-	sudo pacman --needed --noconfirm mpv libreoffice-fresh libreoffice-fresh-pt-br rawtherapee gimp blender inkscape thunderbird 1> /dev/null 2> /dev/null
-    yay --needed --noconfirm visual-studio-code-bin pqiv spotify telegram-desktop 1> /dev/null 2> /dev/null
+	sudo pacman --needed --noconfirm mpv libreoffice-fresh libreoffice-fresh-pt-br rawtherapee gimp blender inkscape thunderbird
+    yay --needed --noconfirm visual-studio-code-bin pqiv spotify telegram-desktop
 fi
 
 if pergunta "== > Remover configuração do desenvolvedor? RECOMENDADO PARA TOTAL FUNCIONAMENTO!" S; then

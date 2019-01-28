@@ -61,7 +61,7 @@ echo "== > Fornecendo permissões"
 	chmod +x scripts/*
 
 echo "== > Medidas de segurança"
-	rm -dR $HOME/{.vimrc,.xinitrc,.vim}
+	sudo rm -dR $HOME/{.vimrc,.xinitrc,.vim}
 	rm -dR $HOME/.config/{instalador.sh,compton,desenvolvedor,dunst,i3,polybar,ranger,rofi,scripts,termite,wallpaper}
 
 echo "== > Instalando configuração"
@@ -75,7 +75,7 @@ echo "== > Instalando configuração"
 
 if pergunta "== > Deseja instalar os pacotes extras?" S; then
 	sudo pacman --needed --noconfirm mpv libreoffice-fresh libreoffice-fresh-pt-br rawtherapee gimp blender inkscape thunderbird
-    yay --needed --noconfirm visual-studio-code-bin pqiv spotify telegram-desktop
+    yay --noconfirm visual-studio-code-bin pqiv spotify telegram-desktop
 fi
 
 if pergunta "== > Remover configuração do desenvolvedor? RECOMENDADO PARA TOTAL FUNCIONAMENTO!" S; then

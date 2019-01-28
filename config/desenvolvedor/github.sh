@@ -27,22 +27,23 @@ pergunta() {
     done
 }
 
-echo "== > Olá "$USER"!"
+echo -e "\e[33m== > \e[39mOlá "$USER"!"
 
-echo "== > Verificando"
+echo -e "\e[33m== > \e[39mVerificando"
     cd $HOME/GitHub/i3-dex
     git pull
     cd config
 
-echo "== > Medidas de segurança"
+echo -e "\e[33m== > \e[39mMedidas de segurança"
     sudo rm -dR {.vimrc,instalador.sh,compton,desenvolvedor,dunst,i3,polybar,ranger,rofi,scripts,termite,wallpaper}
 
-echo "== > Copiando arquivos"
+echo -e "\e[33m== > \e[39mCopiando arquivos"
 	cp $HOME/.vimrc $HOME/GitHub/i3-dex/config
     cp -r $HOME/.config/{instalador.sh,compton,desenvolvedor,dunst,i3,polybar,ranger,rofi,scripts,termite,wallpaper} $HOME/GitHub/i3-dex/config
     notify-send "Cópia concluída"
 
-if pergunta "== > Deseja fazer upload para o GitHub?" S; then
+echo -e "\e[33m== > \e[39mDeseja fazer upload para o GitHub?"
+if pergunta "S - Para sim || N - Para não ----" S; then
     cd $HOME/GitHub/i3-dex
     git add --all
     git commit

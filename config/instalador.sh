@@ -3,28 +3,28 @@
 # Jirrez Matheus
 
 pergunta() {
-    local prompt default reply
-    while true; do
-        if [ "${2:-}" = "Y" ]; then
-            prompt="S/N"
-            default=S
-        elif [ "${2:-}" = "N" ]; then
-            prompt="S/N"
-            default=N
-        else
-            prompt="S/N"
-            default=
-        fi
-        echo -n "$1 [$prompt] "
-        read reply </dev/tty
-        if [ -z "$reply" ]; then
-            reply=$default
-        fi
-        case "$reply" in
-            [Ss]*) return 0  ;;
-            [Nn]*) return  1 ;;
-        esac
-    done
+	local prompt default reply
+	while true; do
+		if [ "${2:-}" = "Y" ]; then
+			prompt="S/N"
+			default=S
+		elif [ "${2:-}" = "N" ]; then
+			prompt="S/N"
+			default=N
+		else
+			prompt="S/N"
+			default=
+		fi
+		echo -n "$1 [$prompt] "
+		read reply </dev/tty
+		if [ -z "$reply" ]; then
+			reply=$default
+		fi
+		case "$reply" in
+			[Ss]*) return 0 ;;
+			[Nn]*) return 1 ;;
+		esac
+	done
 }
 
 echo -e "\e[33m\e[1m==> \e[39m\e[1mOlá "$USER".\e[0m"
@@ -51,7 +51,7 @@ echo -e "\e[33m\e[1m==> \e[39m\e[1mCriando diretórios\e[0m"
 
 echo -e "\e[33m\e[1m==> \e[39m\e[1mBaixando I3 Dex\e[0m"
 	cd $HOME/GitHub
-	sudo rm -dR i3-dex
+	sudo rm -dR i3-dex 1> /dev/null 2> /dev/null
 	git clone https://github.com/jirrezdex/i3-dex.git | exit
 	cd i3-dex/config
 
@@ -61,8 +61,8 @@ echo -e "\e[33m\e[1m==> \e[39m\e[1mFornecendo permissões\e[0m"
 	chmod +x scripts/*
 
 echo -e "\e[33m\e[1m==> \e[39m\e[1mMedidas de segurança\e[0m"
-	sudo rm -dR $HOME/{.vimrc,.xinitrc,.vim}
-	rm -dR $HOME/.config/{instalador.sh,compton,desenvolvedor,dunst,i3,polybar,ranger,rofi,scripts,termite,wallpaper}
+	sudo rm -dR $HOME/{.vimrc,.xinitrc,.vim} 1> /dev/null 2> /dev/null
+	sudo rm -dR $HOME/.config/{instalador.sh,compton,desenvolvedor,dunst,i3,polybar,ranger,rofi,scripts,termite,wallpaper} 1> /dev/null 2> /dev/null
 
 echo -e "\e[33m\e[1m==> \e[39m\e[1mInstalando configuração\e[0m"
 	mkdir $HOME/.vim 1> /dev/null 2> /dev/null
@@ -76,7 +76,7 @@ echo -e "\e[33m\e[1m==> \e[39m\e[1mInstalando configuração\e[0m"
 echo -e "\e[33m\e[1m==> \e[39m\e[1mDeseja instalar os pacotes extras?\e[0m"
 if pergunta "S - Para sim || N - Para não ----" S; then
 	sudo pacman -S --needed --noconfirm mpv libreoffice-fresh libreoffice-fresh-pt-br rawtherapee gimp blender inkscape thunderbird
-    yay -S --needed --noconfirm visual-studio-code-bin pqiv spotify telegram-desktop
+	yay -S --needed --noconfirm visual-studio-code-bin pqiv spotify telegram-desktop
 fi
 
 echo -e "\e[33m\e[1m==> \e[39m\e[1mRemover configuração do desenvolvedor? RECOMENDADO PARA TOTAL FUNCIONAMENTO!\e[0m"

@@ -322,6 +322,7 @@ click-left = exec $HOME/.config/scripts/controle.sh
 ################ Definições
 [settings]
 screenchange-reload = true
+pseudo-transparency = true 
 
 ################ WM
 [global/wm]

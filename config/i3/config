@@ -5,7 +5,7 @@
 set $mod Mod4
 
 ################ Fonte de título para janela
-font pango:Fantasque Sans Mono
+font pango:Fira Sans
 
 ################ Use $Mod+Mouse para arrastar janelas flutuantes
 floating_modifier $mod

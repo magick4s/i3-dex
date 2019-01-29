@@ -62,8 +62,8 @@ padding-left = 0
 padding-right = 0
 module-margin-left = 0
 module-margin-right = 0
-font-0 = Fira Sans:size=10:antialias=true;0;0
-font-1 = feather:pixelsize=10
+font-0 = "Fantasque Sans Mono:pixelsize=10"
+font-1 = "feather:pixelsize=10;1"
 modules-left = menu i3vintage github screencast screenshot
 modules-center = i3
 modules-right = temperatura bateria hora data
@@ -88,8 +88,8 @@ padding-left = 0
 padding-right = 0
 module-margin-left = 0
 module-margin-right = 0
-font-0 = Fira Sans:size=10:antialias=true;0;0
-font-1 = feather:pixelsize=10
+font-0 = "Fantasque Sans Mono:pixelsize=10"
+font-1 = "feather:pixelsize=10;1"
 modules-left = som voltar tocar-parar avancar cmus
 modules-center = janela
 modules-right = cpu memoria arquivos wireless usuario controle
@@ -101,7 +101,7 @@ locale = pt_BR.UTF-8
 [module/menu]
 type = custom/text
 content = 
-content-padding = 2
+content-padding = 1
 content-foreground = ${cores.menu}
 click-left = exec rofi -show run -display-run "I3 Dex"
 
@@ -124,14 +124,14 @@ ws-icon-9 = 10;OUTROS
 strip-wsnumbers = true
 label-mode = %mode%
 label-mode-padding = 1
-label-focused =  %name%
+label-focused = %name%
 label-focused-padding = 1
 label-focused-foreground = ${cores.focado}
-label-unfocused =  %name%
+label-unfocused = %name%
 label-unfocused-padding = 1
-label-visible =  %name%
+label-visible = %name%
 label-visible-padding = 1
-label-urgent =  %name%
+label-urgent = %name%
 label-urgent-padding = 1
 label-urgent-foreground = ${cores.urgente}
 
@@ -141,10 +141,10 @@ type = internal/temperature
 thermal-zone = 0
 warn-temperature = 60
 format = <ramp> <label>
-format-padding = 2
+format-padding = 1
 format-foreground = ${cores.temperatura}
 format-warn = <ramp> <label-warn>
-format-warn-padding = 2
+format-warn-padding = 1
 format-warn-foreground = ${cores.temperatura}
 label = %temperature-c%
 label-warn = %temperature-c%
@@ -160,10 +160,10 @@ interval = 1
 poll-interval = 5
 time-format = %H:%M
 format-charging = <animation-charging> <label-charging>
-format-charging-padding = 2
+format-charging-padding = 1
 format-charging-foreground = ${cores.bateria}
 format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-padding = 2
+format-discharging-padding = 1
 format-discharging-foreground = ${cores.bateria}
 label-charging = %percentage%%
 label-discharging = %percentage%%
@@ -182,7 +182,7 @@ type = internal/date
 interval = 1
 time = %H:%M
 format =  <label>
-format-padding = 2
+format-padding = 1
 format-foreground = ${cores.hora}
 label = %time%
 
@@ -192,7 +192,7 @@ type = internal/date
 interval = 1
 date = %a, %d-%m-%Y
 format =  <label>
-format-padding = 2
+format-padding = 1
 format-foreground = ${cores.data}
 label = %date%
 
@@ -200,11 +200,11 @@ label = %date%
 [module/som]
 type = internal/alsa
 format-volume = <label-volume><bar-volume>
-format-volume-padding = 2
+format-volume-padding = 1
 label-volume = ""
 label-volume-foreground = ${cores.som}
 format-muted-prefix = ""
-format-muted-padding = 2
+format-muted-padding = 1
 format-muted-foreground = ${cores.som}
 label-muted = 
 bar-volume-width = 10
@@ -223,7 +223,7 @@ bar-volume-empty-font = 5
 [module/voltar]
 type = custom/text
 content = 
-content-padding = 2
+content-padding = 1
 content-foreground = ${cores.voltar}
 click-left = cmus-remote --prev
 
@@ -238,7 +238,7 @@ click-left = cmus-remote --pause
 [module/avancar]
 type = custom/text
 content = 
-content-padding = 2
+content-padding = 1
 content-foreground = ${cores.avancar}
 click-left = cmus-remote --next
 
@@ -246,7 +246,7 @@ click-left = cmus-remote --next
 [module/cmus]
 type = custom/script
 label = %output%
-label-padding = 2
+label-padding = 1
 label-maxlen = 50
 label-foreground = ${cores.cmus}
 interval = 0.5
@@ -256,7 +256,7 @@ exec = $HOME/.config/scripts/cmus.sh
 [module/janela]
 type = internal/xwindow
 format =  <label>
-format-padding = 2
+format-padding = 1
 format-foreground = ${cores.janela}
 label = %title%
 label-maxlen = 50
@@ -268,7 +268,7 @@ type = internal/cpu
 interval = 0.5
 format = <label>
 label =  %percentage%%
-label-padding = 2
+label-padding = 1
 label-foreground = ${cores.cpu}
 
 ################ Memória
@@ -277,7 +277,7 @@ type = internal/memory
 interval = 0.2
 format = <label>
 label =  %percentage_used%%
-label-padding = 2
+label-padding = 1
 label-foreground = ${cores.memoria}
 
 ################ Arquivos
@@ -286,7 +286,7 @@ type = internal/fs
 interval = 25
 mount-0 = /
 label-mounted =  %used%
-label-mounted-padding = 2
+label-mounted-padding = 1
 label-mounted-foreground = ${cores.arquivos}
 
 ################ Wireless
@@ -294,11 +294,11 @@ label-mounted-foreground = ${cores.arquivos}
 type = internal/network
 interface = wlo1
 format-connected = " <label-connected>"
-format-connected-padding = 2
+format-connected-padding = 1
 format-connected-foreground = ${cores.wireless}
 label-connected = %essid%
 format-disconnected = " <label-disconnected>"
-format-disconnected-padding = 2
+format-disconnected-padding = 1
 format-disconnected-foreground = ${cores.wireless}
 label-disconnected = desconectado
 
@@ -308,14 +308,14 @@ type = custom/script
 interval = 1
 tail = true
 exec = echo  $USER
-format-padding = 2
+format-padding = 1
 format-foreground = ${cores.usuario}
 
 ################ Controle
 [module/controle]
 type = custom/text
 content = 
-content-padding = 2
+content-padding = 1
 content-foreground = ${cores.controle}
 click-left = exec $HOME/.config/scripts/controle.sh
 

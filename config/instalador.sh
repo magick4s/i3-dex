@@ -70,7 +70,7 @@ echo -e "\e[33m\e[1m==> \e[39m\e[1mInstalando configuração\e[0m"
 	git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 	echo "exec i3" > $HOME/.xinitrc
 	mkdir $HOME/.local/share/fonts 1> /dev/null 2> /dev/null
-	cp feather.ttf $HOME/.local/share/fonts 1> /dev/null 2> /dev/null
+	cp feather.ttf fantasquesansmonoregular.ttf $HOME/.local/share/fonts 1> /dev/null 2> /dev/null
 	cp -r {instalador.sh,compton,desenvolvedor,dunst,i3,polybar,ranger,rofi,scripts,termite,wallpaper} $HOME/.config
 
 echo -e "\e[33m\e[1m==> \e[39m\e[1mDeseja instalar os pacotes extras?\e[0m"

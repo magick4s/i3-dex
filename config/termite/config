@@ -1,7 +1,7 @@
 # jirrezdex@gmail.com
 # Jirrez Matheus
 
-################ Básico
+# Básico
 [options]
 transparency = 0.8
 font = xos4 Terminus 14px
@@ -14,24 +14,22 @@ icon_name = termite
 scrollback_lines = 999999
 urgent_on_bell = true
 
-################ Navegador
+# Navegador
 browser = firefox
 
-################ Cursor cego | system | on | off
+# Cursor cego | system | on | off
 cursor_blink = on
 
-################ Cursor - bloco - sublinhado - ibeam
+# Cursor - bloco - sublinhado - ibeam
 cursor_shape = ibeam
 
-################ Cores
+# Cores
 [colors]
 foreground = #D5C4A1
 foreground_bold = #EBDBB2
 cursor = #EBDBB2
 cursor_foreground = #1D2021
 background = #0F111A
-
-
 color0 = #1D2021
 color1 = #FB4934
 color2 = #B8BB26

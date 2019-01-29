@@ -1,7 +1,7 @@
 # jirrezdex@gmail.com
 # Jirrez Matheus
 
-################ Configuração
+# Configuração
 [global]
 monitor = 0
 follow = mouse
@@ -39,23 +39,23 @@ title = Dunst
 class = Dunst
 startup_notification = false
 
-################ Controle de som
+# Controle de som
 [shortcuts]
 close_all = ctrl+shift+space
 
-################ Simples
+# Simples
 [urgency_low]
 background = "#0F111A"
 foreground = "#FFFFFF"
 timeout = 8
 
-################ Normal
+# Normal
 [urgency_normal]
 background = "#0F111A"
 foreground = "#FFFFFF"
 timeout = 10
 
-################ Urgente
+# Urgente
 [urgency_critical]
 background = "#0F111A"
 foreground = "#FFFFFF"

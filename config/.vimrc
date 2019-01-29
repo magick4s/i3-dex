@@ -26,7 +26,6 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
 " Plugins pessoais
-Plugin 'JamshedVesuna/vim-markdown-preview'
 
 " Finalização Vundle
 call vundle#end()

@@ -1,64 +1,64 @@
 # jirrezdex@gmail.com
 # Jirrez Matheus
 
-################ Básico
+# Básico
 set $mod Mod4
 
-################ Fonte de título para janela
+# Fonte de título para janela
 font pango:Fira Sans
 
-################ Use $Mod+Mouse para arrastar janelas flutuantes
+# Use $Mod+Mouse para arrastar janelas flutuantes
 floating_modifier $mod
 
-################ Iniciar Terminal
+# Iniciar Terminal
 bindsym $mod+Return exec termite
 
-################ Fechar janela
+# Fechar janela
 bindsym $mod+Shift+q kill
 
-################ Mudar foco
+# Mudar foco
 bindsym $mod+j focus left
 bindsym $mod+k focus down
 bindsym $mod+l focus up
 bindsym $mod+semicolon focus right
 
-################ Como alternativa, você pode usar as teclas do cursor
+# Como alternativa, você pode usar as teclas do cursor
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
-################ Mover janela focada
+# Mover janela focada
 bindsym $mod+Shift+j move left
 bindsym $mod+Shift+k move down
 bindsym $mod+Shift+l move up
 bindsym $mod+Shift+semicolon move right
 
-################ Como alternativa, você pode usar as teclas do cursor
+# Como alternativa, você pode usar as teclas do cursor
 bindsym $mod+Shift+Left move left 343px
 bindsym $mod+Shift+Down move down 210px
 bindsym $mod+Shift+Up move up 210px
 bindsym $mod+Shift+Right move right 343px
 
-################ Dividir na orientação horizontal
+# Dividir na orientação horizontal
 bindsym $mod+h split h
 
-################ Dividir na orientação vertical
+# Dividir na orientação vertical
 bindsym $mod+v split v
 
-################ Entrar em modo fullscreen com janela focada
+# Entrar em modo fullscreen com janela focada
 bindsym $mod+f fullscreen toggle
 
-################ Flutuante
+# Flutuante
 bindsym $mod+Shift+space floating toggle
 
-################ Mudar o foco entre janelas e janelas flutuantes
+# Mudar o foco entre janelas e janelas flutuantes
 bindsym $mod+space focus mode_toggle
 
-################ Focar container pai
+# Focar container pai
 bindsym $mod+a focus parent
 
-################ Nomes dos Workspaces
+# Nomes dos Workspaces
 set $ws1 "1:TERMINAL"
 set $ws2 "2:IDE"
 set $ws3 "3:NAVEGADOR"
@@ -70,7 +70,7 @@ set $ws8 "8:EDITOR"
 set $ws9 "9:PESSOAL"
 set $ws10 "10:OUTROS"
 
-################ Workspaces
+# Workspaces
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
@@ -82,11 +82,11 @@ bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 
-################ Navegação - Próximo/Voltar
+# Navegação - Próximo/Voltar
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
 
-################ Mover janela focada para determinado Workspace
+# Mover janela focada para determinado Workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3
@@ -98,13 +98,13 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
-################ Recarregar arquivo de configuração
+# Recarregar arquivo de configuração
 bindsym $mod+Shift+c reload
 
-################ Recarregar I3-Gaps
+# Recarregar I3-Gaps
 bindsym $mod+Shift+r restart
 
-################ Gaps
+# Gaps
 for_window [class="^.*"] border pixel 0
 gaps inner 5
 gaps outer 5
@@ -150,28 +150,28 @@ client.urgent           #0F111A #0F111A    #FFFFFF #0F111A   #0F111A
 client.placeholder      #0F111A #0F111A    #FFFFFF #0F111A   #0F111A
 client.background       #0F111A
 
-################ Redimensionar janela, você também pode usar o mouse para isto
+# Redimensionar janela, você também pode usar o mouse para isto
 mode "resize" {
-        ################ Essas ligações são acionadas assim que você entrar no modo redimensionamento
-        ################ Pressionar para a esquerda ou direita para reduzir ou aumentar a largura da janela
-        ################ Pressionar para cima ou para baixo para diminuir ou aumentar a altura da janela
+        # Essas ligações são acionadas assim que você entrar no modo redimensionamento
+        # Pressionar para a esquerda ou direita para reduzir ou aumentar a largura da janela
+        # Pressionar para cima ou para baixo para diminuir ou aumentar a altura da janela
         bindsym j resize shrink width 10 px or 10 ppt
         bindsym k resize grow height 10 px or 10 ppt
         bindsym l resize shrink height 10 px or 10 ppt
         bindsym semicolon resize grow width 10 px or 10 ppt
-        ################ Mesmas ligações, mas para as teclas de setas
+        # Mesmas ligações, mas para as teclas de setas
         bindsym Left resize shrink width 10 px or 10 ppt
         bindsym Down resize grow height 10 px or 10 ppt
         bindsym Up resize shrink height 10 px or 10 ppt
         bindsym Right resize grow width 10 px or 10 ppt
-        ################ Voltar ao normal: Enter, Escape ou $Mod+R
+        # Voltar ao normal: Enter, Escape ou $Mod+R
         bindsym Return mode "default"
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
 }
 bindsym $mod+r mode "resize"
 
-################ Definições
+# Definições
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="bubble"] floating enable
 for_window [window_role="task_dialog"] floating enable
@@ -182,10 +182,10 @@ for_window [window_type="GtkFileChooserDialog"] floating enable
 for_window [window_type="Soffice"] floating enable
 for_window [class="Firefox" title="Savar arquivo"] floating enable
 
-################ Borda
+# Borda
 for_window [class="Termite"] border pixel 15
 
-################ Workspace
+# Workspace
 assign [class="(Termite)"] $ws1
 assign [class="(Code|sun-awt-X11-XFramePeer|jetbrains-studio)"] $ws2
 assign [class="(Firefox)"] $ws3
@@ -197,33 +197,33 @@ assign [class="(Gimp|Blender|Inkscape|Rawtherapee)"] $ws8
 assign [class="(Steam|Thunderbird)"] $ws9
 assign [class="()"] $ws10
 
-################ Controle de brilho
+# Controle de brilho
 bindsym XF86MonBrightnessUp exec light -A 5
 bindsym XF86MonBrightnessDown exec light -U 5
 
-################ Controle de volume
+# Controle de volume
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%
 bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
 
-################ Controle de som
+# Controle de som
 bindsym XF86AudioPlay exec playerctl play
 bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-################ Inicialização
+# Inicialização
 exec --no-startup-id pactl set-sink-volume 0 40%
 exec_always --no-startup-id feh --bg-scale $HOME/.config/wallpaper/wallpaper.png
-exec_always --no-startup-id $HOME/.config/desenvolvedor/monitores.sh
+exec_always --no-startup-id $HOME/.config/desenvolvedor/dev.sh
 exec_always --no-startup-id $HOME/.config/scripts/polybar.sh
 exec_always --no-startup-id compton --config $HOME/.config/compton/compton.conf
 exec_always --no-startup-id dunst --config $HOME/.config/compton/dunstrc
 
-################ Comandos F1,2,3,4,5,6,7,8,9,10,11,12
+# Comandos F1,2,3,4,5,6,7,8,9,10,11,12
 bindsym Control+F11 exec termite -e $HOME/.config/instalador.sh
 bindsym Control+F12 exec termite -e $HOME/.config/desenvolvedor/github.sh
 
-################ Comandos
+# Comandos
 bindsym Print exec --no-startup-id $HOME/.config/scripts/screenshot.sh
 bindsym Control+Print exec --no-startup-id $HOME/.config/scripts/screencast.sh

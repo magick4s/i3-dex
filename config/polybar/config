@@ -1,7 +1,7 @@
 # jirrezdex@gmail.com
 # Jirrez Matheus
 
-################ Icones
+# Icones
 #                    
 #                    
 #                     
@@ -16,7 +16,7 @@
 #                     
 #               
 
-################ Cores
+# Cores
 [cores]
 barra = #00000000
 borda = #00000000
@@ -45,7 +45,7 @@ wireless = #00FF00
 usuario = #6A0888
 controle = #B404AE
 
-################ Barra de cima
+# Barra de cima
 [bar/cima]
 width = 100%
 height = 23
@@ -71,7 +71,7 @@ cursor-click = pointer
 cursor-scroll = ns-resize
 locale = pt_BR.UTF-8
 
-################ Barra de baixo
+# Barra de baixo
 [bar/baixo]
 width = 100%
 height = 23
@@ -97,7 +97,7 @@ cursor-click = pointer
 cursor-scroll = ns-resize
 locale = pt_BR.UTF-8
 
-################ Menu
+# Menu
 [module/menu]
 type = custom/text
 content = 
@@ -105,7 +105,7 @@ content-padding = 1
 content-foreground = ${cores.menu}
 click-left = exec rofi -show run -display-run "I3 Dex"
 
-################ I3
+# I3
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
@@ -135,7 +135,7 @@ label-urgent = %name%
 label-urgent-padding = 1
 label-urgent-foreground = ${cores.urgente}
 
-################ Temperatura
+# Temperatura
 [module/temperatura]
 type = internal/temperature
 thermal-zone = 0
@@ -150,7 +150,7 @@ label = %temperature-c%
 label-warn = %temperature-c%
 ramp-0 = 
 
-################ Bateria
+# Bateria
 [module/bateria]
 battery = BAT0
 adapter = ADP1
@@ -176,7 +176,7 @@ animation-charging-framerate = 250
 animation-discharging-0 = 
 animation-discharging-framerate = 250
 
-################ Hora
+# Hora
 [module/hora]
 type = internal/date
 interval = 1
@@ -186,7 +186,7 @@ format-padding = 1
 format-foreground = ${cores.hora}
 label = %time%
 
-################ Data
+# Data
 [module/data]
 type = internal/date
 interval = 1
@@ -196,7 +196,7 @@ format-padding = 1
 format-foreground = ${cores.data}
 label = %date%
 
-################ Som
+# Som
 [module/som]
 type = internal/alsa
 format-volume = <label-volume><bar-volume>
@@ -219,7 +219,7 @@ bar-volume-empty-foreground = ${cores.som}
 bar-volume-empty = 
 bar-volume-empty-font = 5
 
-################ Controlador voltar
+# Controlador voltar
 [module/voltar]
 type = custom/text
 content = 
@@ -227,14 +227,14 @@ content-padding = 1
 content-foreground = ${cores.voltar}
 click-left = cmus-remote --prev
 
-################ Controlador play & pause
+# Controlador play & pause
 [module/tocar-parar]
 type = custom/text
 content = 
 content-foreground = ${cores.tocar-parar}
 click-left = cmus-remote --pause
 
-################ Controlador avançar
+# Controlador avançar
 [module/avancar]
 type = custom/text
 content = 
@@ -242,7 +242,7 @@ content-padding = 1
 content-foreground = ${cores.avancar}
 click-left = cmus-remote --next
 
-################ Cmus
+# Cmus
 [module/cmus]
 type = custom/script
 label = %output%
@@ -252,7 +252,7 @@ label-foreground = ${cores.cmus}
 interval = 0.5
 exec = $HOME/.config/scripts/cmus.sh
 
-################ Janela
+# Janela
 [module/janela]
 type = internal/xwindow
 format =  <label>
@@ -262,7 +262,7 @@ label = %title%
 label-maxlen = 50
 label-empty = Sem janelas
 
-################ CPU
+# CPU
 [module/cpu]
 type = internal/cpu
 interval = 0.5
@@ -271,7 +271,7 @@ label =  %percentage%%
 label-padding = 1
 label-foreground = ${cores.cpu}
 
-################ Memória
+# Memória
 [module/memoria]
 type = internal/memory
 interval = 0.2
@@ -280,7 +280,7 @@ label =  %percentage_used%%
 label-padding = 1
 label-foreground = ${cores.memoria}
 
-################ Arquivos
+# Arquivos
 [module/arquivos]
 type = internal/fs
 interval = 25
@@ -289,7 +289,7 @@ label-mounted =  %used%
 label-mounted-padding = 1
 label-mounted-foreground = ${cores.arquivos}
 
-################ Wireless
+# Wireless
 [module/wireless]
 type = internal/network
 interface = wlo1
@@ -302,7 +302,7 @@ format-disconnected-padding = 1
 format-disconnected-foreground = ${cores.wireless}
 label-disconnected = desconectado
 
-################ Usuário
+# Usuário
 [module/usuario]
 type = custom/script
 interval = 1
@@ -311,7 +311,7 @@ exec = echo  $USER
 format-padding = 1
 format-foreground = ${cores.usuario}
 
-################ Controle
+# Controle
 [module/controle]
 type = custom/text
 content = 
@@ -319,11 +319,11 @@ content-padding = 1
 content-foreground = ${cores.controle}
 click-left = exec $HOME/.config/scripts/controle.sh
 
-################ Definições
+# Definições
 [settings]
 screenchange-reload = true
 
-################ WM
+# WM
 [global/wm]
 margin-top = 5
 margin-bottom = 5

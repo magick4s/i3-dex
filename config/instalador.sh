@@ -71,7 +71,7 @@ echo -e "\e[33m\e[1m==> \e[39m\e[1mMedidas de segurança\e[0m"
 	# Removendo arquivos da $HOME
 	sudo rm -dR $HOME/{.vimrc,.xinitrc,.vim} 1> /dev/null 2> /dev/null
 	# Removendo arquivos da .config
-	sudo rm -dR $HOME/.config/{instalador.sh,compton,desenvolvedor,dunst,i3,polybar,ranger,rofi,scripts,termite,wallpaper} 1> /dev/null 2> /dev/null
+	sudo rm -dR $HOME/.config/{instalador.sh,compton,desenvolvedor,dunst,i3,neofetch,polybar,ranger,rofi,scripts,termite,wallpaper} 1> /dev/null 2> /dev/null
 
 echo -e "\e[33m\e[1m==> \e[39m\e[1mInstalando configuração\e[0m"
 	# Configurando o vim
@@ -85,12 +85,12 @@ echo -e "\e[33m\e[1m==> \e[39m\e[1mInstalando configuração\e[0m"
 	mkdir $HOME/.local/share/fonts 1> /dev/null 2> /dev/null
 	cp feather.ttf $HOME/.local/share/fonts 1> /dev/null 2> /dev/null
 	# Copiando os arquivos de funcionamento
-	cp -r {instalador.sh,compton,desenvolvedor,dunst,i3,polybar,ranger,rofi,scripts,termite,wallpaper} $HOME/.config
+	cp -r {instalador.sh,compton,desenvolvedor,dunst,i3,neofetch,polybar,ranger,rofi,scripts,termite,wallpaper} $HOME/.config
 
 echo -e "\e[33m\e[1m==> \e[39m\e[1mDeseja instalar os pacotes extras?\e[0m"
 if pergunta "S - Para sim || N - Para não ----" S; then
 	# Pacotes extras com o pacman
-	sudo pacman -S --needed --noconfirm cmus mpv libreoffice-fresh libreoffice-fresh-pt-br rawtherapee gimp blender inkscape thunderbird
+	sudo pacman -S --needed --noconfirm cmus mpv libreoffice-fresh libreoffice-fresh-pt-br rawtherapee gimp blender inkscape thunderbird arc-icon-theme arc-gtk-theme lxappearance
 	# Pacotes extras com o yay
 	yay -S --needed --noconfirm visual-studio-code-bin pqiv telegram-desktop
 fi

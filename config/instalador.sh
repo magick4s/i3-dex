@@ -68,6 +68,7 @@ echo -e "\e[33m\e[1m==> \e[39m\e[1mInstalando configuração\e[0m"
 	mkdir $HOME/.vim 1> /dev/null 2> /dev/null
 	cp .vimrc $HOME
 	git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
+	vim -c 'PluginInstall' -c 'qa!'
 	echo "exec i3" > $HOME/.xinitrc
 	mkdir $HOME/.local/share/fonts 1> /dev/null 2> /dev/null
 	cp feather.ttf $HOME/.local/share/fonts 1> /dev/null 2> /dev/null

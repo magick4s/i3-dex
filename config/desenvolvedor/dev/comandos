@@ -1,0 +1,1 @@
+alias mp3='youtube-dl --audio-quality 192k --extract-audio --no-part --audio-format mp3'

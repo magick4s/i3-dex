@@ -4,7 +4,8 @@
 
 titulo="."
 data=$(date +%Y-%m-%d--%H-%M-%S)
-nome="Screenshot-Selecionada--${data}"
+nome="Screenshot-Selecionada--${data}${extensao}"
+extensao=$(.png)
 tipo="image/png"
 
 if [ -f $HOME/.config/user-dirs.dirs ]; then
@@ -22,7 +23,7 @@ if [ ! -z $nome ]; then
 	if [ $(pwd) != $dir ]; then
 		mv $nome $dir
 	fi
-	xclip -selection c -t $tipo -i $dir$nome
+	xclip -selection c -t $tipo -i $dir$nome$extensao
 fi
 
 notify-send -i $titulo "Captura realizada" "$nome" -i $HOME/.config/dunst/icones/screenshot.png

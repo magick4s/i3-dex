@@ -226,4 +226,5 @@ bindsym Control+F12 exec termite -e $HOME/.config/desenvolvedor/github.sh
 
 # Comandos
 bindsym Print exec --no-startup-id $HOME/.config/scripts/screenshot.sh
-bindsym Control+Print exec --no-startup-id $HOME/.config/scripts/screencast.sh
+bindsym Control+Print exec --no-startup-id $HOME/.config/scripts/screenshot-selecionada.sh
+bindsym $mod+Print exec --no-startup-id $HOME/.config/scripts/screencast.sh

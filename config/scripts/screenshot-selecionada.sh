@@ -3,9 +3,11 @@
 # Jirrez Matheus
 
 titulo="."
+app="maim"
+params="-u"
 data=$(date +%Y-%m-%d--%H-%M-%S)
-nome="Screenshot-Selecionada--${data}${extensao}"
-extensao=$(.png)
+nome="Screenshot--${data}"
+extensao=".png"
 tipo="image/png"
 
 if [ -f $HOME/.config/user-dirs.dirs ]; then
@@ -17,14 +19,29 @@ fi
 
 [ ! -d $dir ] && mkdir -p $dir
 
-maim --select -d 1 --bordersize 2 --color=0.15,0.17,0.26,1 "$nome"
+command -v $app >/dev/null 2>&1 || {
+	msg="O aplicativo $app não está instalado" 
 
-if [ ! -z $nome ]; then
+	command -v notify-send >/dev/null 2>&1 && {
+		notify-send "ERRO" "$msg";
+	} || {
+		echo $msg;
+	}
+
+	exit 1;
+}
+
+	params="$params -s"
+	arquivo="${nome}${extensao}"
+	$app -d 2 $params ${arquivo}
+	msg="$arquivo"
+
+if [ ! -z $arquivo ]; then
 	if [ $(pwd) != $dir ]; then
-		mv $nome $dir
+		mv $arquivo $dir
 	fi
-	xclip -selection c -t $tipo -i $dir$nome$extensao
+	xclip -selection c -t $tipo -i $dir$arquivo
 fi
 
-notify-send -i $titulo "Captura realizada" "$nome" -i $HOME/.config/dunst/icones/screenshot.png
+notify-send -i $titulo "Captura realizada" "$msg" -i $HOME/.config/dunst/icones/screenshot.png
 exit 0

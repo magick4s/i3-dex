@@ -8,7 +8,6 @@ params="-u"
 data=$(date +%Y-%m-%d--%H-%M-%S)
 nome="Screenshot--${data}"
 extensao=".png"
-atraso=10
 tipo="image/png"
 
 if [ -f $HOME/.config/user-dirs.dirs ]; then
@@ -32,35 +31,10 @@ command -v $app >/dev/null 2>&1 || {
 	exit 1;
 }
 
-if [ "$1" == "-c" ]; then
-
-	exit 0
-
-elif [ "$1" == "-w" ]; then
-	params="$params -w"
-	arquivo="${nome}-window${extensao}"
-	$app $params ${arquivo}
-	msg="$arquivo"
-elif [ "$1" == "-s" ]; then
-	params="$params -s"
-	arquivo="${nome}-sel${extensao}"
+	params="$params -u"
+	arquivo="${nome}${extensao}"
 	$app -d 2 $params ${arquivo}
 	msg="$arquivo"
-elif [ "$1" == "-d" ]; then
-	params="$params -d $atraso"
-	arquivo="${nome}-delay${extensao}"
-	$app $params ${arquivo}
-	msg="$arquivo"
-elif [ "$1" == "-e" ]; then
-	arquivo="${nome}-edit${extensao}"
-	$app $params ${dir}${arquivo}
-	msg="$arquivo"
-	viewnior ${dir}${arquivo}
-else
-	arquivo="${nome}${extensao}"
-	$app $params ${arquivo}
-	msg="$arquivo"
-fi
 
 if [ ! -z $arquivo ]; then
 	if [ $(pwd) != $dir ]; then

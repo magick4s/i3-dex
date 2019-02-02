@@ -214,7 +214,7 @@ bindsym XF86AudioPrev exec playerctl previous
 
 # Inicialização
 exec --no-startup-id pactl set-sink-volume 0 40%
-exec_always --no-startup-id feh --bg-scale $HOME/.config/wallpaper/wallpaper.png
+exec_always --no-startup-id $HOME/.config/scripts/wallpaper.sh
 exec_always --no-startup-id $HOME/.config/desenvolvedor/dev.sh
 exec_always --no-startup-id $HOME/.config/scripts/polybar.sh
 exec_always --no-startup-id compton --config $HOME/.config/compton/compton.conf

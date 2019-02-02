@@ -193,7 +193,7 @@ assign [class="(Pqiv|pqiv)"] $ws4
 assign [class="(mpv)"] $ws5
 assign [class="(Telegram)"] $ws6
 assign [class="(libreoffice-startcenter|libreoffice-writer|libreoffice-draw|libreoffice-presentation|libreoffice-impress|libreoffice-calc)"] $ws7
-assign [class="(Gimp|Blender|Inkscape|Rawtherapee|openshot)"] $ws8
+assign [class="(Gimp|Blender|Inkscape|Rawtherapee|openshot|krita)"] $ws8
 assign [class="(Steam|Thunderbird)"] $ws9
 assign [class="()"] $ws10
 
@@ -215,14 +215,14 @@ bindsym XF86AudioPrev exec playerctl previous
 # Inicialização
 exec --no-startup-id pactl set-sink-volume 0 40%
 exec_always --no-startup-id $HOME/.config/scripts/wallpaper.sh
-exec_always --no-startup-id $HOME/.config/desenvolvedor/dev.sh
+exec_always --no-startup-id $HOME/.config/desenvolvedor/scripts/dev.sh
 exec_always --no-startup-id $HOME/.config/scripts/polybar.sh
 exec_always --no-startup-id compton --config $HOME/.config/compton/compton.conf
 exec_always --no-startup-id dunst --config $HOME/.config/compton/dunstrc
 
 # Comandos F1,2,3,4,5,6,7,8,9,10,11,12
 bindsym Control+F11 exec termite -e $HOME/.config/instalador.sh
-bindsym Control+F12 exec termite -e $HOME/.config/desenvolvedor/github.sh
+bindsym Control+F12 exec termite -e $HOME/.config/desenvolvedor/scripts/github.sh
 
 # Comandos
 bindsym Print exec --no-startup-id $HOME/.config/scripts/screenshot.sh

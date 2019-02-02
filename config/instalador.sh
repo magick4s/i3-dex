@@ -64,7 +64,7 @@ echo -e "\e[33m\e[1m==> \e[39m\e[1mBaixando I3 Dex\e[0m"
 echo -e "\e[33m\e[1m==> \e[39m\e[1mFornecendo permissões\e[0m"
 	# Permissões
 	chmod +x *
-	chmod +x desenvolvedor/*
+	chmod +x desenvolvedor/scripts/*
 	chmod +x scripts/*
 
 echo -e "\e[33m\e[1m==> \e[39m\e[1mMedidas de segurança\e[0m"

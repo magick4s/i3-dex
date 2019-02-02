@@ -2,7 +2,7 @@
 # jirrezdex@gmail.com
 # Jirrez Matheus
 
-res=$(echo "-Bloquear;-Sair;-Reiniciar;-Desligar" | rofi -sep ";" -dmenu -p "Controle do sistema" -bw 0 -separator-style none -location 0 -width 20 -lines 4 -padding 5)
+res=$(echo "-Bloquear;-Sair;-Reiniciar;-Desligar" | rofi -sep ";" -dmenu -p "Controle do sistema" -bw 1 -separator-style none -location 0 -width 20 -lines 4 -padding 5)
 if [ ! -z $res ]; then
   case $res in
     -Bloquear)

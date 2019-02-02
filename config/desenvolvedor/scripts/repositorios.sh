@@ -1,3 +1,8 @@
+#!/usr/bin/env bash
+# jirrezdex@gmail.com
+# Jirrez Matheus
+
+# Exclusão, criação e acesso ao diretório GitHub
 sudo rm -dR $HOME/GitHub 1> /dev/null 2> /dev/null
 mkdir $HOME/GitHub 1> /dev/null 2> /dev/null
 cd $HOME/GitHub 1> /dev/null 2> /dev/null

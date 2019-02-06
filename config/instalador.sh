@@ -31,7 +31,7 @@ echo -e "\e[33m\e[1m==> \e[39m\e[1mOlá "$USER".\e[0m"
 
 echo -e "\e[33m\e[1m==> \e[39m\e[1mInstalando pacotes essenciais\e[0m"
 	# Básico para o funcionamento do sistema
-	sudo pacman -S --needed --noconfirm w3m compton xorg-xinit xorg-server xorg-xrandr i3-gaps rofi termite ranger firefox vim git go maim ffmpeg pulseaudio pulseaudio-alsa alsa-utils xclip libnotify dunst ttf-dejavu ttf-fira-sans ttf-fira-mono feh terminus-font 
+	sudo pacman -S --needed --noconfirm firefox w3m compton xorg-xinit xorg-server xorg-xrandr i3-gaps rofi termite ranger vim git go maim ffmpeg pulseaudio pulseaudio-alsa alsa-utils xclip libnotify dunst ttf-dejavu ttf-fira-sans ttf-fira-mono feh terminus-font 
 	# Instalando yay
 	git clone https://aur.archlinux.org/yay.git
 	cd yay
@@ -39,7 +39,7 @@ echo -e "\e[33m\e[1m==> \e[39m\e[1mInstalando pacotes essenciais\e[0m"
 	cd ..
 	sudo rm -dR yay
 	# Pacotes Instalados com yay
-	yay -S --needed --noconfirm polybar nerd-fonts-source-code-pro
+	yay -S --needed --noconfirm polybar nerd-fonts-source-code-pro pqiv
 
 echo -e "\e[33m\e[1m==> \e[39m\e[1mHabilitando serviços\e[0m"
 	# Serviços
@@ -90,9 +90,9 @@ echo -e "\e[33m\e[1m==> \e[39m\e[1mInstalando configuração\e[0m"
 echo -e "\e[33m\e[1m==> \e[39m\e[1mDeseja instalar os pacotes extras?\e[0m"
 if pergunta "S - Para sim || N - Para não ----" S; then
 	# Pacotes extras com o pacman
-	sudo pacman -S --needed --noconfirm cmus mpv libreoffice-fresh libreoffice-fresh-pt-br rawtherapee gimp blender inkscape thunderbird arc-icon-theme arc-gtk-theme lxappearance
+	sudo pacman -S --needed --noconfirm cmus mpv libreoffice-fresh libreoffice-fresh-pt-br rawtherapee gimp blender inkscape thunderbird arc-icon-theme arc-gtk-theme lxappearance krita openshot
 	# Pacotes extras com o yay
-	yay -S --needed --noconfirm visual-studio-code-bin pqiv telegram-desktop
+	yay -S --needed --noconfirm visual-studio-code-bin telegram-desktop android-studio discord
 fi
 
 echo -e "\e[33m\e[1m==> \e[39m\e[1mRemover configuração do desenvolvedor? RECOMENDADO PARA TOTAL FUNCIONAMENTO!\e[0m"

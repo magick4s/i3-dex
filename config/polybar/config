@@ -33,9 +33,9 @@ bateria = #FFFF00
 hora = #5858FA
 data = #9A2EFE
 som = #2EFE9A
-voltar =#2EFE9A
+voltar = #2EFE9A
 tocar-parar = #2EFE9A
-avancar =#2EFE9A
+avancar = #2EFE9A
 cmus = #2EFE9A
 janela = #339AF0
 cpu = #FF00FF
@@ -103,7 +103,7 @@ type = custom/text
 content = 
 content-padding = 1
 content-foreground = ${cores.menu}
-click-left = exec rofi -show run -display-run "I3 Dex"
+click-left = exec rofi -show drun -display-run "I3 Dex"
 
 # I3
 [module/i3]

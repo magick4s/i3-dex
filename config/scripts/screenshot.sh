@@ -43,5 +43,6 @@ if [ ! -z $arquivo ]; then
 	xclip -selection c -t $tipo -i $dir$arquivo
 fi
 
-notify-send -i $titulo "Captura realizada" "$msg" -i $HOME/.config/dunst/icones/screenshot.png
+notify-send -i $titulo "Captura realizada" "$msg" -i 
+$HOME/.config/dunst/icones/screenshot.png
 exit 0

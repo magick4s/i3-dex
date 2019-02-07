@@ -4,7 +4,7 @@
 # Básico
 [options]
 transparency = 0.8
-font = xos4 Terminus 14px
+font = fira mono 14px
 use_xft = true
 allow_bold = true
 audible_bell = false
@@ -25,32 +25,33 @@ cursor_shape = ibeam
 
 # Cores
 [colors]
-foreground = #D5C4A1
-foreground_bold = #EBDBB2
-cursor = #EBDBB2
-cursor_foreground = #1D2021
-background = #0F111A
-color0 = #1D2021
-color1 = #FB4934
-color2 = #B8BB26
-color3 = #FABD2F
-color4 = #83A598
-color5 = #D3869B
-color6 = #8EC07C
-color7 = #D5C4A1
-color8 = #665C54
-color9 = #FB4934
-color10 = #B8BB26
-color11 = #FABD2F
-color12 = #83A598
-color13 = #D3869B
-color14 = #8EC07C
-color15 = #FBF1C7
-color16 = #FE8019
-color17 = #D65D0E
-color18 = #3C3836
-color19 = #504945
-color20 = #BDAE93
-color21 = #EBDBB21
+foreground          = #585260
+foreground_bold     = #26232a
+cursor              = #26232a
+cursor_foreground   = #efecf4
+background          = #ffffff
+
+color0  = #efecf4
+color1  = #be4678
+color2  = #2a9292
+color3  = #a06e3b
+color4  = #576ddb
+color5  = #955ae7
+color6  = #398bc6
+color7  = #585260
+color8  = #7e7887
+color9  = #be4678
+color10 = #2a9292
+color11 = #a06e3b
+color12 = #576ddb
+color13 = #955ae7
+color14 = #398bc6
+color15 = #19171c
+color16 = #aa573c
+color17 = #bf40bf
+color18 = #e2dfe7
+color19 = #8b8792
+color20 = #655f6d
+color21 = #26232a
 
 # vim: ft=dosini cms=#%s

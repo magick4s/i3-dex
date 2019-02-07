@@ -16,18 +16,6 @@ bindsym $mod+Return exec termite
 # Fechar janela
 bindsym $mod+Shift+q kill
 
-# Mudar foco
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
-
-# Como alternativa, você pode usar as teclas do cursor
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
-
 # Mover janela focada
 bindsym $mod+Shift+j move left
 bindsym $mod+Shift+k move down
@@ -82,10 +70,6 @@ bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 
-# Navegação - Próximo/Voltar
-bindsym $mod+Tab workspace next
-bindsym $mod+Shift+Tab workspace prev
-
 # Mover janela focada para determinado Workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
@@ -97,6 +81,10 @@ bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
+
+# Navegação - Próximo/Voltar
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
 
 # Recarregar arquivo de configuração
 bindsym $mod+Shift+c reload
@@ -183,7 +171,7 @@ for_window [window_type="Soffice"] floating enable
 for_window [class="Firefox" title="Savar arquivo"] floating enable
 
 # Borda
-for_window [class="Termite"] border pixel 15
+for_window [class="Termite"] border pixel 2
 
 # Workspace
 assign [class="(Termite)"] $ws1
@@ -214,17 +202,16 @@ bindsym XF86AudioPrev exec playerctl previous
 
 # Inicialização
 exec --no-startup-id pactl set-sink-volume 0 40%
-exec_always --no-startup-id $HOME/.config/scripts/wallpaper.sh
-exec_always --no-startup-id $HOME/.config/desenvolvedor/scripts/dev.sh
+exec_always --no-startup-id hsetroot -center $HOME/.config/wallpaper/wallpaper.jpg
+exec_always --no-startup-id $HOME/.config/scripts/desenvolvedor/dev.sh
 exec_always --no-startup-id $HOME/.config/scripts/polybar.sh
 exec_always --no-startup-id compton --config $HOME/.config/compton/compton.conf
 exec_always --no-startup-id dunst --config $HOME/.config/compton/dunstrc
 
 # Comandos F1,2,3,4,5,6,7,8,9,10,11,12
 bindsym Control+F11 exec termite -e $HOME/.config/instalador.sh
-bindsym Control+F12 exec termite -e $HOME/.config/desenvolvedor/scripts/github.sh
+bindsym Control+F12 exec termite -e $HOME/.config/scripts/desenvolvedor/github.sh
 
 # Comandos
 bindsym Print exec --no-startup-id $HOME/.config/scripts/screenshot.sh
-bindsym Control+Print exec --no-startup-id $HOME/.config/scripts/screenshot-selecionada.sh
 bindsym $mod+Print exec --no-startup-id $HOME/.config/scripts/screencast.sh

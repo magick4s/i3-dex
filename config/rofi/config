@@ -2,8 +2,8 @@
 # Jirrez Matheus
 
 rofi.color-enabled:                  true
-rofi.color-normal:                   argb:00000000,  #FFFFFF , argb:00000000,  #339AF0 ,  #0F111A
-rofi.color-urgent:                   argb:00000000,  #FFFFFF , argb:00000000,  #339AF0 ,  #0F111A
-rofi.color-active:                   argb:00000000,  #FFFFFF , argb:00000000,  #339AF0 ,  #0F111A
-rofi.color-window:                   #0F111A,        #FFFFFF , #0F111A
+rofi.color-normal:                   argb:00000000,  #0F111A , argb:00000000,  #2C3E50 ,  #FFFFFF
+rofi.color-urgent:                   argb:00000000,  #0F111A , argb:00000000,  #2C3E50 ,  #FFFFFF
+rofi.color-active:                   argb:00000000,  #0F111A , argb:00000000,  #339AF0 ,  #FFFFFF
+rofi.color-window:                   #FFFFFF,        #0F111A , #FFFFFF
 rofi.separator-style: none

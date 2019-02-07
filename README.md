@@ -5,14 +5,14 @@
 <b>Site:</b> </b> <a href='https://www.jirrezdex.com'>www.jirrezdex.com</a></p>
 
 ### Configuração dos Workspaces
-> 1&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;Emulador de terminal  
-> 2&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;Navegador  
-> 3&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;Visualizador de imagens  
-> 4&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;Reprodutor de músicas e vídeos  
-> 5&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;Social  
-> 6&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;Email  
+> 1&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;Terminal 
+> 2&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;IDE  
+> 3&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;Navegador  
+> 4&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;Visualizador 
+> 5&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;Reprodutor  
+> 6&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;Social  
 > 7&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;Escritório  
-> 8&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;Edição visual  
+> 8&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;Editor  
 > 9&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;Pessoal  
 > 10&nbsp;=&nbsp;&nbsp;&nbsp;Outros
 

@@ -171,17 +171,17 @@ for_window [window_type="Soffice"] floating enable
 for_window [class="Firefox" title="Savar arquivo"] floating enable
 
 # Borda
-for_window [class="Termite"] border pixel 2
+for_window [class="Termite"] border pixel 2 floating enable
 
 # Workspace
-assign [class="(Termite)"] $ws1
-assign [class="(Code|sun-awt-X11-XFramePeer|jetbrains-studio)"] $ws2
+assign [class="(Termite|Code)"] $ws1
+assign [class="(Thunar)"] $ws2
 assign [class="(Firefox)"] $ws3
 assign [class="(Pqiv|pqiv)"] $ws4
 assign [class="(mpv)"] $ws5
 assign [class="(Telegram|discord)"] $ws6
 assign [class="(libreoffice-startcenter|libreoffice-writer|libreoffice-draw|libreoffice-presentation|libreoffice-impress|libreoffice-calc)"] $ws7
-assign [class="(Gimp|Blender|Inkscape|Rawtherapee|openshot|krita)"] $ws8
+assign [class="(Gimp|Blender|Inkscape|Rawtherapee|kdenlive|krita)"] $ws8
 assign [class="(Steam|Thunderbird)"] $ws9
 assign [class="()"] $ws10
 

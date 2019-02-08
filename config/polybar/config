@@ -64,7 +64,7 @@ module-margin-left = 0
 module-margin-right = 0
 font-0 = "Fira Sans:antialias=true:size=10;0"
 font-1 = "feather:pixelsize=10;0"
-modules-left = menu i3vintage github screencast screenshot
+modules-left = menu tray
 modules-center = i3
 modules-right = temperatura bateria hora data
 cursor-click = pointer
@@ -100,7 +100,7 @@ locale = pt_BR.UTF-8
 # Menu
 [module/menu]
 type = custom/text
-content = [ Menu]
+content =  Menu
 content-padding = 1
 content-foreground = ${cores.menu}
 click-left = exec rofi -bw 2 -lines 5 -font "Fira Sans 14" -show drun -display-drun "$USER"
@@ -111,27 +111,27 @@ type = internal/i3
 format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
-ws-icon-0 = 1;[DEV]
-ws-icon-1 = 2;[ARQUIVOS]
-ws-icon-2 = 3;[NAVEGADOR]
-ws-icon-3 = 4;[VISUALIZADOR]
-ws-icon-4 = 5;[REPRODUTOR]
-ws-icon-5 = 6;[SOCIAL]
-ws-icon-6 = 7;[ESCRITÓRIO]
-ws-icon-7 = 8;[EDITOR]
-ws-icon-8 = 9;[PESSOAL]
-ws-icon-9 = 10;[OUTROS]
+ws-icon-0 = 1;DESENVOLVEDOR
+ws-icon-1 = 2;ARQUIVOS
+ws-icon-2 = 3;NAVEGADOR
+ws-icon-3 = 4;VISUALIZADOR
+ws-icon-4 = 5;REPRODUTOR
+ws-icon-5 = 6;SOCIAL
+ws-icon-6 = 7;ESCRITÓRIO
+ws-icon-7 = 8;EDITOR
+ws-icon-8 = 9;PESSOAL
+ws-icon-9 = 10;OUTROS
 strip-wsnumbers = true
-label-mode = [%mode%]
+label-mode = %mode%
 label-mode-padding = 1
-label-focused = [%name%]
+label-focused = %name%
 label-focused-padding = 1
 label-focused-foreground = ${cores.focado}
-label-unfocused = [%name%]
+label-unfocused = %name%
 label-unfocused-padding = 1
-label-visible = [%name%]
+label-visible = %name%
 label-visible-padding = 1
-label-urgent = [%name%]
+label-urgent = %name%
 label-urgent-padding = 1
 label-urgent-foreground = ${cores.urgente}
 
@@ -140,10 +140,10 @@ label-urgent-foreground = ${cores.urgente}
 type = internal/temperature
 thermal-zone = 0
 warn-temperature = 60
-format = [<ramp> <label>]
+format = <label> <ramp>
 format-padding = 1
 format-foreground = ${cores.temperatura}
-format-warn = [<ramp> <label-warn>]
+format-warn = <label-warn> <ramp>
 format-warn-padding = 1
 format-warn-foreground = ${cores.temperatura}
 label = %temperature-c%
@@ -159,10 +159,10 @@ full-at = 98
 interval = 1
 poll-interval = 5
 time-format = %H:%M
-format-charging = [<animation-charging> <label-charging>]
+format-charging = <label-charging> <animation-charging>
 format-charging-padding = 1
 format-charging-foreground = ${cores.bateria}
-format-discharging = [<ramp-capacity> <label-discharging>]
+format-discharging = <label-discharging> <ramp-capacity>
 format-discharging-padding = 1
 format-discharging-foreground = ${cores.bateria}
 label-charging = %percentage%%
@@ -181,7 +181,7 @@ animation-discharging-framerate = 250
 type = internal/date
 interval = 1
 time = %H:%M
-format = [ <label>]
+format = <label> 
 format-padding = 1
 format-foreground = ${cores.hora}
 label = %time%
@@ -191,7 +191,7 @@ label = %time%
 type = internal/date
 interval = 1
 date = %a, %d-%m-%Y
-format = [ <label>]
+format = <label> 
 format-padding = 1
 format-foreground = ${cores.data}
 label = %date%
@@ -199,14 +199,14 @@ label = %date%
 # Som
 [module/som]
 type = internal/alsa
-format-volume = [<label-volume><bar-volume>]
+format-volume = <label-volume><bar-volume>
 format-volume-padding = 1
 label-volume = ""
 label-volume-foreground = ${cores.som}
-format-muted-prefix = "["
+format-muted-prefix = ""
 format-muted-padding = 1
 format-muted-foreground = ${cores.som}
-label-muted = ]
+label-muted = 
 bar-volume-width = 10
 bar-volume-gradient = false
 bar-volume-indicator-foreground = ${cores.som}
@@ -222,7 +222,7 @@ bar-volume-empty-font = 5
 # Controlador voltar
 [module/voltar]
 type = custom/text
-content = [
+content = 
 content-padding = 1
 content-foreground = ${cores.voltar}
 click-left = cmus-remote --prev
@@ -237,7 +237,7 @@ click-left = cmus-remote --pause
 # Controlador avançar
 [module/avancar]
 type = custom/text
-content = ]
+content = 
 content-padding = 1
 content-foreground = ${cores.avancar}
 click-left = cmus-remote --next
@@ -245,7 +245,7 @@ click-left = cmus-remote --next
 # Cmus
 [module/cmus]
 type = custom/script
-label = [%output%]
+label = %output%
 label-padding = 1
 label-maxlen = 50
 label-foreground = ${cores.cmus}
@@ -255,7 +255,7 @@ exec = $HOME/.config/scripts/cmus.sh
 # Janela
 [module/janela]
 type = internal/xwindow
-format = [ <label>]
+format = <label>
 format-padding = 1
 format-foreground = ${cores.janela}
 label = %title%
@@ -266,8 +266,8 @@ label-empty = Sem janelas
 [module/cpu]
 type = internal/cpu
 interval = 0.5
-format = [<label>]
-label =  %percentage%%
+format = <label>
+label = %percentage%% 
 label-padding = 1
 label-foreground = ${cores.cpu}
 
@@ -275,8 +275,8 @@ label-foreground = ${cores.cpu}
 [module/memoria]
 type = internal/memory
 interval = 0.2
-format = [<label>]
-label =  %percentage_used%%
+format = <label>
+label = %percentage_used%% 
 label-padding = 1
 label-foreground = ${cores.memoria}
 
@@ -285,7 +285,7 @@ label-foreground = ${cores.memoria}
 type = internal/fs
 interval = 25
 mount-0 = /
-label-mounted = [ %used%]
+label-mounted = %used% 
 label-mounted-padding = 1
 label-mounted-foreground = ${cores.arquivos}
 
@@ -293,11 +293,11 @@ label-mounted-foreground = ${cores.arquivos}
 [module/wireless]
 type = internal/network
 interface = wlo1
-format-connected = "[ <label-connected>]"
+format-connected = "<label-connected> "
 format-connected-padding = 1
 format-connected-foreground = ${cores.wireless}
 label-connected = %essid%
-format-disconnected = "[ <label-disconnected>]"
+format-disconnected = "<label-disconnected> "
 format-disconnected-padding = 1
 format-disconnected-foreground = ${cores.wireless}
 label-disconnected = desconectado
@@ -307,14 +307,14 @@ label-disconnected = desconectado
 type = custom/script
 interval = 1
 tail = true
-exec = echo [ $USER]
+exec = echo $USER 
 format-padding = 1
 format-foreground = ${cores.usuario}
 
 # Controle
 [module/controle]
 type = custom/text
-content = []
+content = 
 content-padding = 1
 content-foreground = ${cores.controle}
 click-left = exec $HOME/.config/scripts/controle.sh

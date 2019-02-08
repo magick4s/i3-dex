@@ -47,7 +47,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # Nomes dos Workspaces
-set $ws1 "1:DEV"
+set $ws1 "1:EMULADOR"
 set $ws2 "2:ARQUIVOS"
 set $ws3 "3:NAVEGADOR"
 set $WS4 "4:VISUALIZADOR"
@@ -202,7 +202,7 @@ bindsym XF86AudioPrev exec playerctl previous
 
 # Inicialização
 exec --no-startup-id pactl set-sink-volume 0 40%
-exec_always --no-startup-id hsetroot -center $HOME/.config/wallpaper/wallpaper.jpg
+exec_always --no-startup-id hsetroot -fill $HOME/.config/wallpaper/wallpaper.jpg
 exec_always --no-startup-id $HOME/.config/scripts/desenvolvedor/dev.sh
 exec_always --no-startup-id $HOME/.config/scripts/polybar.sh
 exec_always --no-startup-id compton --config $HOME/.config/compton/compton.conf

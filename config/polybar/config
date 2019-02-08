@@ -133,11 +133,11 @@ format-warn-padding = 1
 format-warn-foreground = ${cores.temperatura}
 label = %temperature-c%
 label-warn = %temperature-c%
-ramp-0 = 
-ramp-1 = 
+ramp-0 = 
+ramp-1 = 
 ramp-2 = 
-ramp-3 = 
-ramp-4 = 
+ramp-3 = 
+ramp-4 = 
 
 # Bateria
 [module/bateria]

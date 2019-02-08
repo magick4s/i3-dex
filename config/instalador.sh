@@ -41,7 +41,7 @@ echo -e "\e[33m\e[1m==> \e[39m\e[1mInstalando pacotes essenciais\e[0m"
 	sudo rm -dR yay
 
 	# Pacotes Instalados com yay
-	yay -S --needed --noconfirm polybar pqiv visual-studio-code-bin
+	yay -S --needed --noconfirm polybar pqiv ttf-font-awesome ttf-font-awesome-4 visual-studio-code-bin
 
 echo -e "\e[33m\e[1m==> \e[39m\e[1mHabilitando serviços\e[0m"
 	# Serviços

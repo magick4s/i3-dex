@@ -55,6 +55,7 @@ echo -e "\e[33m\e[1m==> \e[39m\e[1mCriando diretórios\e[0m"
 	mkdir $HOME/{Documentos,Downloads,GitHub,Imagens,Modelos,Música,Público,Vídeos,Área\ \de\ \trabalho} 1> /dev/null 2> /dev/null
 	mkdir $HOME/Imagens/Screenshots 1> /dev/null 2> /dev/null
 	mkdir $HOME/Vídeos/Screencasts 1> /dev/null 2> /dev/null
+	mkdir $HOME/.local/share/fonts 1> /dev/null 2> /dev/null
 
 echo -e "\e[33m\e[1m==> \e[39m\e[1mBaixando I3 Dex\e[0m"
 	# Atualizando arquivos e configuração I3 Dex
@@ -77,11 +78,14 @@ echo -e "\e[33m\e[1m==> \e[39m\e[1mMedidas de segurança\e[0m"
 	sudo rm -dR $HOME/.config/{instalador.sh,compton,dunst,i3,neofetch,polybar,rofi,scripts,termite,wallpaper} 1> /dev/null 2> /dev/null
 
 	# Removendo os temas
-	sudo rm -dR $HOME/.local/share/themes
+	sudo rm -dR $HOME/.local/share/themes/I3\ Dex
 
 echo -e "\e[33m\e[1m==> \e[39m\e[1mInstalando configuração\e[0m"
 	# Configurando o .xinitrc
 	echo "exec i3" > $HOME/.xinitrc
+
+	# Copiando fontes
+	cp -r feather.ttf $HOME/.local/share/fonts/
 
 	# Copiando os arquivos de funcionamento
 	cp -r {instalador.sh,compton,dunst,i3,neofetch,polybar,rofi,scripts,termite,wallpaper} $HOME/.config

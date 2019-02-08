@@ -47,16 +47,16 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # Nomes dos Workspaces
-set $ws1 "1:"
-set $ws2 "2:"
-set $ws3 "3:"
-set $WS4 "4:"
-set $ws5 "5:"
-set $ws6 "6:"
-set $ws7 "7:"
-set $ws8 "8:"
-set $ws9 "9:"
-set $ws10 "10:"
+set $ws1 "1:TERMINAL"
+set $ws2 "2:IDE"
+set $ws3 "3:NAVEGADOR"
+set $WS4 "4:VISUALIZADOR"
+set $ws5 "5:REPRODUTOR"
+set $ws6 "6:SOCIAL"
+set $ws7 "7:ESCRITÓRIO"
+set $ws8 "8:EDITOR"
+set $ws9 "9:PESSOAL"
+set $ws10 "10:OUTROS"
 
 # Workspaces
 bindsym $mod+1 workspace $ws1
@@ -168,7 +168,7 @@ for_window [window_type="dialog"] floating enable
 for_window [window_type="menu"] floating enable
 for_window [window_type="GtkFileChooserDialog"] floating enable
 for_window [window_type="Soffice"] floating enable
-for_window [class="Firefox" title="Savar arquivo"] floating enable
+for_window [class="Firefox" title="Salvar arquivo"] floating enable
 
 # Borda
 for_window [class="Termite"] floating enable, resize set 900 450, border pixel 4

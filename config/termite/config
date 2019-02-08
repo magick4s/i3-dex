@@ -3,8 +3,8 @@
 
 # Básico
 [options]
-transparency = 0.8
-font = fira mono 14px
+transparency = 0
+font = Fira Mono 14px
 use_xft = true
 allow_bold = true
 audible_bell = false

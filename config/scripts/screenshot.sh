@@ -16,11 +16,9 @@ nome="Screenshot--${data}"
 extensao=".png"
 atraso=10
 tipo="image/png"
-lixeira="${HOME}/.local/share/Trash"
 titulo="."
 
 [ ! -d $dir ] && mkdir -p $dir
-[ ! -d $lixeira ] && mkdir -p $lixeira
 
 command -v $app >/dev/null 2>&1 || {
 	msg="O aplicativo $app não está instalado" 

@@ -47,16 +47,16 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # Nomes dos Workspaces
-set $ws1 "1:EMULADOR"
-set $ws2 "2:ARQUIVOS"
-set $ws3 "3:NAVEGADOR"
-set $WS4 "4:VISUALIZADOR"
-set $ws5 "5:REPRODUTOR"
-set $ws6 "6:SOCIAL"
-set $ws7 "7:ESCRITÓRIO"
-set $ws8 "8:EDITOR"
-set $ws9 "9:PESSOAL"
-set $ws10 "10:OUTROS"
+set $ws1 "1:"
+set $ws2 "2:"
+set $ws3 "3:"
+set $WS4 "4:"
+set $ws5 "5:"
+set $ws6 "6:"
+set $ws7 "7:"
+set $ws8 "8:"
+set $ws9 "9:"
+set $ws10 "10:"
 
 # Workspaces
 bindsym $mod+1 workspace $ws1
@@ -174,15 +174,15 @@ for_window [class="Firefox" title="Savar arquivo"] floating enable
 for_window [class="Termite"] floating enable, resize set 900 450, border pixel 4
 
 # Workspace
-assign [class="(Termite|Code)"] $ws1
-assign [class="(Thunar)"] $ws2
+assign [class="(Termite)"] $ws1
+assign [class="(Code)"] $ws2
 assign [class="(Firefox)"] $ws3
 assign [class="(Pqiv|pqiv)"] $ws4
 assign [class="(mpv)"] $ws5
 assign [class="(Telegram|discord)"] $ws6
 assign [class="(libreoffice-startcenter|libreoffice-writer|libreoffice-draw|libreoffice-presentation|libreoffice-impress|libreoffice-calc)"] $ws7
 assign [class="(Gimp|Blender|Inkscape|Rawtherapee|kdenlive|krita)"] $ws8
-assign [class="(Steam|Thunderbird)"] $ws9
+assign [class="(Thunar|Steam|Thunderbird)"] $ws9
 assign [class="()"] $ws10
 
 # Controle de brilho

@@ -83,10 +83,6 @@ echo -e "\e[33m\e[1m==> \e[39m\e[1mInstalando configuração\e[0m"
 	# Configurando o .xinitrc
 	echo "exec i3" > $HOME/.xinitrc
 
-	# Instalando as fontes
-	mkdir $HOME/.local/share/fonts 1> /dev/null 2> /dev/null
-	cp feather.ttf $HOME/.local/share/fonts 1> /dev/null 2> /dev/null
-
 	# Copiando os arquivos de funcionamento
 	cp -r {instalador.sh,compton,dunst,i3,neofetch,polybar,rofi,scripts,termite,wallpaper} $HOME/.config
 

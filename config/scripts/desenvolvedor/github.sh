@@ -36,10 +36,10 @@ echo -e "\e[33m\e[1m==> \e[39m\e[1mVerificando\e[0m"
 
 echo -e "\e[33m\e[1m==> \e[39m\e[1mMedidas de segurança\e[0m"
 	sudo rm -dR {instalador.sh,compton,dunst,i3,neofetch,polybar,rofi,scripts,termite,themes,wallpaper}
+	mkdir themes
 
 echo -e "\e[33m\e[1m==> \e[39m\e[1mCopiando arquivos\e[0m"
 	cp -r $HOME/.config/{instalador.sh,compton,dunst,i3,neofetch,polybar,rofi,scripts,termite,wallpaper} $HOME/GitHub/i3-dex/config
-	mkdir themes
 	cp -r $HOME/.local/share/themes/I3\ Dex $HOME/GitHub/i3-dex/config/themes
 	notify-send "Cópia concluída"
 

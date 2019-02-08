@@ -91,7 +91,7 @@ echo -e "\e[33m\e[1m==> \e[39m\e[1mInstalando configuração\e[0m"
 	cp -r {instalador.sh,compton,dunst,i3,neofetch,polybar,rofi,scripts,termite,wallpaper} $HOME/.config
 
 	# Copiando o tema para o diretório
-	cp -r themes $HOME/.local/share/themes
+	cp -r themes/I3\ Dex $HOME/.local/share/themes
 
 echo -e "\e[33m\e[1m==> \e[39m\e[1mDeseja instalar os pacotes extras?\e[0m"
 if pergunta "S - Para sim || N - Para não ----" S; then

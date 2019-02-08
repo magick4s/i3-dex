@@ -93,7 +93,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # Gaps
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 1
 gaps inner 5
 gaps outer 5
 set $mode_gaps Gaps: (o) outer, (i)
@@ -171,7 +171,7 @@ for_window [window_type="Soffice"] floating enable
 for_window [class="Firefox" title="Savar arquivo"] floating enable
 
 # Borda
-for_window [class="Termite"] floating enable resize set 900 450
+for_window [class="Termite"] floating enable, resize set 900 450, border pixel 4
 
 # Workspace
 assign [class="(Termite|Code)"] $ws1

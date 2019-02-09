@@ -75,7 +75,7 @@ echo -e "\e[33m\e[1m==> \e[39m\e[1mMedidas de segurança\e[0m"
 	sudo rm -dR $HOME/{.vim,.vimrc,.xinitrc} 1> /dev/null 2> /dev/null
     
 	# Removendo arquivos da .config
-	sudo rm -dR $HOME/.config/{instalador.sh,compton,dunst,i3,neofetch,polybar,rofi,scripts,termite,wallpaper} 1> /dev/null 2> /dev/null
+	sudo rm -dR $HOME/.config/{instalador.sh,compton,dunst,gtk-3.0,i3,neofetch,polybar,rofi,scripts,termite,wallpaper} 1> /dev/null 2> /dev/null
 
 	# Removendo os temas
 	sudo rm -dR $HOME/.local/share/themes/I3\ Dex
@@ -94,7 +94,7 @@ echo -e "\e[33m\e[1m==> \e[39m\e[1mInstalando configuração\e[0m"
 	cp -r feather.ttf $HOME/.local/share/fonts/
 
 	# Copiando os arquivos de funcionamento
-	cp -r {instalador.sh,compton,dunst,i3,neofetch,polybar,rofi,scripts,termite,wallpaper} $HOME/.config
+	cp -r {instalador.sh,compton,dunst,gtk-3.0,i3,neofetch,polybar,rofi,scripts,termite,wallpaper} $HOME/.config
 
 	# Copiando o tema para o diretório
 	cp -r themes/I3\ Dex $HOME/.local/share/themes

@@ -158,23 +158,14 @@ type = internal/battery
 full-at = 98
 interval = 1
 poll-interval = 5
-time-format = %H:%M
-format-charging = <label-charging> <animation-charging>
+format-charging = <label-charging>
 format-charging-padding = 1
 format-charging-foreground = ${cores.bateria}
-format-discharging = <label-discharging> <ramp-capacity>
+format-discharging = <label-discharging>
 format-discharging-padding = 1
 format-discharging-foreground = ${cores.bateria}
-label-charging = %percentage%%
-label-discharging = %percentage%%
-format-full-prefix = " "
-label-full = 100%
-ramp-capacity-0 = 
-bar-capacity-width = 10
-animation-charging-0 = 
-animation-charging-framerate = 250
-animation-discharging-0 = 
-animation-discharging-framerate = 250
+label-charging = %percentage%% 
+label-discharging = %percentage%% 
 
 # Hora
 [module/hora]
@@ -314,7 +305,7 @@ format-foreground = ${cores.usuario}
 # Controle
 [module/controle]
 type = custom/text
-content = 
+content = Controle 
 content-padding = 1
 content-foreground = ${cores.controle}
 click-left = exec $HOME/.config/scripts/controle.sh

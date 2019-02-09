@@ -36,7 +36,7 @@ echo -e "\e[33m\e[1m==> \e[39m\e[1mInstalando pacotes essenciais\e[0m"
 	# Instalando yay
 	git clone https://aur.archlinux.org/yay.git
 	cd yay
-	makepkg -si
+	makepkg -si --noconfirm
 	cd ..
 	sudo rm -dR yay
 

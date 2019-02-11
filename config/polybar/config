@@ -36,7 +36,7 @@ som = #FFFFFF
 voltar = #FFFFFF
 tocar-parar = #FFFFFF
 avancar = #FFFFFF
-cmus = #FFFFFF
+musica = #FFFFFF
 janela = #FFFFFF
 cpu = #FFFFFF
 memoria = #FFFFFF
@@ -90,7 +90,7 @@ module-margin-left = 0
 module-margin-right = 0
 font-0 = "Fira Sans:antialias=true:size=10;0"
 font-1 = "feather:pixelsize=10;0"
-modules-left = som voltar tocar-parar avancar cmus
+modules-left = som voltar tocar-parar avancar musica
 modules-center = janela
 modules-right = cpu memoria arquivos wireless usuario controle
 cursor-click = pointer
@@ -210,38 +210,37 @@ bar-volume-empty-foreground = ${cores.som}
 bar-volume-empty = 
 bar-volume-empty-font = 5
 
-# Controlador voltar
+################ Controlador voltar
 [module/voltar]
 type = custom/text
 content = 
-content-padding = 1
+content-padding = 2
 content-foreground = ${cores.voltar}
-click-left = cmus-remote --prev
+click-left = playerctl previous
 
-# Controlador play & pause
+################ Controlador play & pause
 [module/tocar-parar]
 type = custom/text
 content = 
 content-foreground = ${cores.tocar-parar}
-click-left = cmus-remote --pause
+click-left = playerctl play-pause
 
-# Controlador avançar
+################ Controlador avançar
 [module/avancar]
 type = custom/text
 content = 
-content-padding = 1
+content-padding = 2
 content-foreground = ${cores.avancar}
-click-left = cmus-remote --next
+click-left = playerctl next
 
-# Cmus
-[module/cmus]
+################ Música
+[module/musica]
 type = custom/script
 label = %output%
-label-padding = 1
+label-padding = 2
+label-foreground = ${cores.musica}
 label-maxlen = 50
-label-foreground = ${cores.cmus}
-interval = 0.5
-exec = $HOME/.config/scripts/cmus.sh
+exec = $HOME/.config/scripts/musica.sh
 
 # Janela
 [module/janela]

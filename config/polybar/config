@@ -20,30 +20,30 @@
 [cores]
 barra = #00000000
 borda = #00000000
-fonte = #FFFFFF
-menu = #FFFFFF
-i3vintage = #FFFFFF
-github = #FFFFFF
-screencast = #FFFFFF
-screenshot = #FFFFFF
-focado = #FFFFFF
-urgente = #FFFFFF
-temperatura = #FFFFFF
-bateria = #FFFFFF
-hora = #FFFFFF
-data = #FFFFFF
-som = #FFFFFF
-voltar = #FFFFFF
-tocar-parar = #FFFFFF
-avancar = #FFFFFF
-musica = #FFFFFF
-janela = #FFFFFF
-cpu = #FFFFFF
-memoria = #FFFFFF
-arquivos = #FFFFFF
-wireless = #FFFFFF
-usuario = #FFFFFF
-controle = #FFFFFF
+fonte = #d2d9f3
+menu = #d2d9f3
+i3vintage = #d2d9f3
+github = #d2d9f3
+screencast = #d2d9f3
+screenshot = #d2d9f3
+focado = #d2d9f3
+urgente = #d2d9f3
+temperatura = #d2d9f3
+bateria = #d2d9f3
+hora = #d2d9f3
+data = #d2d9f3
+som = #d2d9f3
+voltar = #d2d9f3
+tocar-parar = #d2d9f3
+avancar = #d2d9f3
+musica = #d2d9f3
+janela = #d2d9f3
+cpu = #d2d9f3
+memoria = #d2d9f3
+arquivos = #d2d9f3
+wireless = #d2d9f3
+usuario = #d2d9f3
+controle = #d2d9f3
 
 # Barra de cima
 [bar/cima]
@@ -103,7 +103,7 @@ type = custom/text
 content =  Menu
 content-padding = 1
 content-foreground = ${cores.menu}
-click-left = exec rofi -bw 2 -lines 5 -font "Fira Sans 14" -show drun -display-drun "$USER"
+click-left = exec rofi -lines 5 -show drun -display-drun "$USER"
 
 # I3
 [module/i3]

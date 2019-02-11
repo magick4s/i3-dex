@@ -131,12 +131,12 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 # Classe                Borda  	Background Texto   Indicador Borda filho
-client.focused          #2C3E50 #2C3E50    #FFFFFF #2C3E50   #2C3E50 
-client.focused_inactive #2C3E50 #2C3E50    #FFFFFF #2C3E50   #2C3E50 
-client.unfocused        #2C3E50 #2C3E50    #FFFFFF #2C3E50   #2C3E50 
-client.urgent           #2C3E50 #2C3E50    #FFFFFF #2C3E50   #2C3E50 
-client.placeholder      #2C3E50 #2C3E50    #FFFFFF #2C3E50   #2C3E50 
-client.background       #2C3E50 
+client.focused          #000a22 #000a22    #FFFFFF #000a22   #000a22
+client.focused_inactive #000a22 #000a22    #FFFFFF #000a22   #000a22 
+client.unfocused        #000a22 #000a22    #FFFFFF #000a22   #000a22 
+client.urgent           #000a22 #000a22    #FFFFFF #000a22   #000a22 
+client.placeholder      #000a22 #000a22    #FFFFFF #000a22   #000a22 
+client.background       #000a22 
 
 # Redimensionar janela, você também pode usar o mouse para isto
 mode "resize" {

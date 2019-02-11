@@ -29,7 +29,7 @@ foreground = #2C3E50
 foreground_bold = #26232a
 cursor = #26232a
 cursor_foreground = #efecf4
-background = #FFFFFF
+background = #d2d9f3
 
 color0 = #efecf4
 color1 = #be4678

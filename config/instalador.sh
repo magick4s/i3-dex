@@ -31,7 +31,7 @@ echo -e "\e[33m\e[1m==> \e[39m\e[1mOlá "$USER".\e[0m"
 
 echo -e "\e[33m\e[1m==> \e[39m\e[1mInstalando pacotes essenciais\e[0m"
 	# Básico para o funcionamento do sistema
-	sudo pacman -S --needed --noconfirm alsa-utils breeze-icons compton ffmpeg firefox git go gvfs hsetroot i3-gaps maim mpv networkmanager pulseaudio pulseaudio-alsa rofi termite thunar thunar-volman ttf-dejavu ttf-fira-mono ttf-fira-sans vim w3m xorg-server xorg-xinit xorg-xrandr
+	sudo pacman -S --needed --noconfirm alsa-utils breeze-icons compton ffmpeg firefox git go gvfs hsetroot i3-gaps maim mpv networkmanager playerctl pulseaudio pulseaudio-alsa rofi termite thunar thunar-volman ttf-dejavu ttf-fira-mono ttf-fira-sans vim w3m xorg-server xorg-xinit xorg-xrandr
 
 	# Instalando yay
 	git clone https://aur.archlinux.org/yay.git

@@ -25,11 +25,11 @@ cursor_shape = ibeam
 
 # Cores
 [colors]
-foreground = #585260
+foreground = #2C3E50 
 foreground_bold = #26232a
 cursor = #26232a
 cursor_foreground = #efecf4
-background = #ffffff
+background = #FFFFFF
 
 color0 = #efecf4
 color1 = #be4678

@@ -131,12 +131,12 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 # Classe                Borda  	Background Texto   Indicador Borda filho
-client.focused          #2C3E50 #2C3E50    #FFFFFF #2C3E50   #2C3E50
-client.focused_inactive #2C3E50 #2C3E50    #FFFFFF #2C3E50   #2C3E50
-client.unfocused        #2C3E50 #2C3E50    #FFFFFF #2C3E50   #2C3E50
-client.urgent           #2C3E50 #2C3E50    #FFFFFF #2C3E50   #2C3E50
-client.placeholder      #2C3E50 #2C3E50    #FFFFFF #2C3E50   #2C3E50
-client.background       #2C3E50
+client.focused          #2C3E50 #2C3E50    #FFFFFF #2C3E50   #2C3E50 
+client.focused_inactive #2C3E50 #2C3E50    #FFFFFF #2C3E50   #2C3E50 
+client.unfocused        #2C3E50 #2C3E50    #FFFFFF #2C3E50   #2C3E50 
+client.urgent           #2C3E50 #2C3E50    #FFFFFF #2C3E50   #2C3E50 
+client.placeholder      #2C3E50 #2C3E50    #FFFFFF #2C3E50   #2C3E50 
+client.background       #2C3E50 
 
 # Redimensionar janela, você também pode usar o mouse para isto
 mode "resize" {
@@ -178,7 +178,7 @@ assign [class="(Termite)"] $ws1
 assign [class="(Firefox)"] $ws2
 assign [class="(Thunderbird)"] $ws3
 assign [class="(Pqiv|pqiv)"] $ws4
-assign [class="(mpv)"] $ws5
+assign [class="(mpv|Rhythmbox)"] $ws5
 assign [class="(Telegram|discord)"] $ws6
 assign [class="(libreoffice-startcenter|libreoffice-writer|libreoffice-draw|libreoffice-presentation|libreoffice-impress|libreoffice-calc)"] $ws7
 assign [class="(Gimp|Blender|Inkscape|Rawtherapee|kdenlive|krita)"] $ws8

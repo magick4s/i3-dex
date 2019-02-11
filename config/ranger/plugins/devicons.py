@@ -80,7 +80,7 @@ file_node_extensions = {
     'ml'       : 'λ',
     'mli'      : 'λ',
     'mov'      : '',
-    'mp3'      : '',
+    'mp3'      : '',
     'mp4'      : '',
     'mpeg'     : '',
     'mpg'      : '',

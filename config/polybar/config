@@ -104,6 +104,7 @@ content =  Menu
 content-padding = 1
 content-foreground = ${cores.menu}
 click-left = exec rofi -lines 5 -show drun -display-drun "$USER"
+click-right = exec rofi -lines 10 -show
 
 # I3
 [module/i3]

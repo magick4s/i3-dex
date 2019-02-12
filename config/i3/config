@@ -130,6 +130,7 @@ mode "$mode_gaps_outer" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
+
 # Classe                Borda  	Background Texto   Indicador Borda filho
 client.focused          #d2d9f3 #d2d9f3    #d2d9f3 #d2d9f3   #d2d9f3
 client.focused_inactive #d2d9f3 #d2d9f3    #d2d9f3 #d2d9f3   #d2d9f3 

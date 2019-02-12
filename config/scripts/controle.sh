@@ -2,16 +2,16 @@
 # jirrezdex@gmail.com
 # Jirrez Matheus
 
-res=$(echo "-Sair;-Reiniciar;-Desligar" | rofi -sep ";" -dmenu -p "Controle do sistema" -separator-style none -location 0 -width 40 -lines 3 -padding 40)
+res=$(echo "-Sair;-Reiniciar;-Desligar" | rofi -sep ";" -dmenu -p "Controle do sistema" -bw 4 -separator-style none -location 0 -width 30 -lines 4 -padding 40)
 if [ ! -z $res ]; then
   case $res in
-     -Sair)
+    -Sair)
       i3-msg exit
     ;;
-    -Reiniciar)
+    -Reiniciar)
       systemctl reboot
     ;;
-    -Desligar)
+    -Desligar)
       systemctl poweroff
     ;;
   esac

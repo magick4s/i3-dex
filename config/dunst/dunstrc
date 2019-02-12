@@ -14,8 +14,8 @@ separator_height = 2
 padding = 12
 horizontal_padding = 14
 frame_width = 1R
-frame_color = "#d2d9f3"
-separator_color = "#d2d9f3"
+frame_color = "#090d18"
+separator_color = "#090d18"
 sort = yes
 idle_threshold = 0
 font = Fira Sans 11
@@ -45,20 +45,20 @@ close_all = ctrl+shift+space
 
 # Simples
 [urgency_low]
-background = "#d2d9f3"
-foreground = "#000a22"
+background = "#090d18"
+foreground = "#d2d9f3"
 timeout = 8
 
 # Normal
 [urgency_normal]
-background = "#d2d9f3"
-foreground = "#000a22"
+background = "#090d18"
+foreground = "#d2d9f3"
 timeout = 10
 
 # Urgente
 [urgency_critical]
-background = "#d2d9f3"
-foreground = "#000a22"
+background = "#090d18"
+foreground = "#d2d9f3"
 timeout = 15
 
 vim: ft=cfg

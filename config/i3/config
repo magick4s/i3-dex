@@ -131,12 +131,12 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 # Classe                Borda  	Background Texto   Indicador Borda filho
-client.focused          #000a22 #000a22    #FFFFFF #000a22   #000a22
-client.focused_inactive #000a22 #000a22    #FFFFFF #000a22   #000a22 
-client.unfocused        #000a22 #000a22    #FFFFFF #000a22   #000a22 
-client.urgent           #000a22 #000a22    #FFFFFF #000a22   #000a22 
-client.placeholder      #000a22 #000a22    #FFFFFF #000a22   #000a22 
-client.background       #000a22 
+client.focused          #d2d9f3 #d2d9f3    #d2d9f3 #d2d9f3   #d2d9f3
+client.focused_inactive #d2d9f3 #d2d9f3    #d2d9f3 #d2d9f3   #d2d9f3 
+client.unfocused        #d2d9f3 #d2d9f3    #d2d9f3 #d2d9f3   #d2d9f3 
+client.urgent           #d2d9f3 #d2d9f3    #d2d9f3 #d2d9f3   #d2d9f3 
+client.placeholder      #d2d9f3 #d2d9f3    #d2d9f3 #d2d9f3   #d2d9f3 
+client.background       #d2d9f3 
 
 # Redimensionar janela, você também pode usar o mouse para isto
 mode "resize" {
@@ -171,7 +171,7 @@ for_window [window_type="Soffice"] floating enable
 for_window [class="Firefox" title="Salvar arquivo"] floating enable
 
 # Borda
-for_window [class="Termite"] floating enable, resize set 900 450, border pixel 8, move position center
+for_window [class="Termite"] floating enable, resize set 1200 500, border pixel 4, move position center
 
 # Workspace
 assign [class="(Termite)"] $ws1

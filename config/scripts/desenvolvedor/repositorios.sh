@@ -19,5 +19,8 @@ git clone https://github.com/jirrezdex/galeria-privada
 # I3 DEX
 git clone https://github.com/jirrezdex/i3-dex
 
+# GitHub.io
+git clone https://github.com/jirrezdex/jirrezdex.github.io.git
+
 # Widget Github
 git clone https://github.com/jirrezdex/widget-github

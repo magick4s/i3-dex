@@ -175,7 +175,7 @@ for_window [class="Firefox" title="Salvar arquivo"] floating enable
 for_window [class="Termite"] floating enable, resize set 1200 500, border pixel 4, move position center
 
 # Workspace
-assign [class="(Termite)"] $ws1
+assign [class="(Termite|Code)"] $ws1
 assign [class="(Firefox)"] $ws2
 assign [class="(Thunderbird)"] $ws3
 assign [class="(Pqiv|pqiv)"] $ws4

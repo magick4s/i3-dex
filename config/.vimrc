@@ -21,7 +21,6 @@ call vundle#begin()
 " Plugins necessários
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'ryanoasis/vim-devicons'
-Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
@@ -30,13 +29,6 @@ Plugin 'vim-airline/vim-airline-themes'
 " Finalização Vundle
 call vundle#end()
 filetype plugin indent on
-
-" Configuração NERDTree
-autocmd vimenter * NERDTree
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-let NERDTreeShowHidden=1
-let g:NERDTreeWinPos = "left"
 
 " Configuração Vim-Airline
 set laststatus=2

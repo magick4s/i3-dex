@@ -2,7 +2,7 @@
 
 <p align='center'><b>Repositório desenvolvido por:</b> Jirrez Matheus | @jirrezdex<br>
 <b>Email:</b> <a href='mailto:jirrezdex@gmail.com'>jirrezdex@gmail.com</a><br>
-<b>Site:</b> </b> <a href='https://www.jirrezdex.com'>www.jirrezdex.com</a></p>
+<b>Site:</b> <a href='https://jirrezdex.github.io/'>Abrir site</a></p>
 
 ### Configuração dos Workspaces
 > 1&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;Terminal  

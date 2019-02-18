@@ -32,6 +32,22 @@ O Arch Linux é a distribuição que será usada - [SITE](https://www.archlinux.
 * A partição *```/dev/sda2```* deve ser *```primária e do tipo Linux Swap / Solaris```*
 * Depois de ter feito isso, dê *```write```* e *```quit```*
 
+## Obs: Para usar máquina virtual (Virtual box):
+* Para máquina virtual, crie um hd de 30GB e crie 3 partições:
+* Para *```/dev/sda1```* bios boot eu separo 2M.
+* Para *```/dev/sda2```* uso 36GB para File system.
+* Para *```/dev/sda3```* uso 4GB para Swap.
+
+```/dev/sda1 – 2M```  
+```/dev/sda2 – 36GB```
+```/dev/sda3 – 4GB```
+
+* A partição *```/dev/sda1```* deve ser *```bios boot ou boot de inicialização```*
+* A partição *```/dev/sda2```* deve ser *```file system```*
+* A partição *```/dev/sda2```* deve ser *```Linux Swap```*
+* Depois de ter feito isso, dê *```write```* e *```quit```*
+
+
 ## ⚙ 5° Passo: Formate as partições criadas:
 ```mkfs.ext4 /dev/sda1```  
 ```mount -t ext4 /dev/sda1 /mnt```  

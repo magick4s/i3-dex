@@ -39,7 +39,7 @@ O Arch Linux é a distribuição que será usada - [SITE](https://www.archlinux.
 * Para *```/dev/sda3```* uso 4GB para Swap.
 
 ```/dev/sda1 – 2M```  
-```/dev/sda2 – 36GB```
+```/dev/sda2 – 36GB```  
 ```/dev/sda3 – 4GB```
 
 * A partição *```/dev/sda1```* deve ser *```bios boot ou boot de inicialização```*

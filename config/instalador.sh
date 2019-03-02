@@ -78,7 +78,7 @@ echo -e "\e[33m\e[1m==> \e[39m\e[1mMedidas de segurança\e[0m"
 	sudo rm -dR $HOME/.config/{instalador.sh,compton,dunst,gtk-3.0,i3,neofetch,polybar,ranger,rofi,scripts,termite,wallpaper} 1> /dev/null 2> /dev/null
 
 	# Removendo os temas
-	sudo rm -dR $HOME/.local/share/themes/I3\ Dex
+	sudo rm -dR $HOME/.local/share/themes/I3\ Dex 1> /dev/null 2> /dev/null
 
 echo -e "\e[33m\e[1m==> \e[39m\e[1mInstalando configuração\e[0m"
 	# Configurando o vim
@@ -91,13 +91,13 @@ echo -e "\e[33m\e[1m==> \e[39m\e[1mInstalando configuração\e[0m"
 	echo "exec i3" > $HOME/.xinitrc
 
 	# Copiando fontes
-	cp -r feather.ttf $HOME/.local/share/fonts/
+	cp -r feather.ttf $HOME/.local/share/fonts/ 1> /dev/null 2> /dev/null
 
 	# Copiando os arquivos de funcionamento
-	cp -r {instalador.sh,compton,dunst,gtk-3.0,i3,neofetch,polybar,ranger,rofi,scripts,termite,wallpaper} $HOME/.config
+	cp -r {instalador.sh,compton,dunst,gtk-3.0,i3,neofetch,polybar,ranger,rofi,scripts,termite,wallpaper} $HOME/.config 1> /dev/null 2> /dev/null
 
 	# Copiando o tema para o diretório
-	cp -r themes/I3\ Dex $HOME/.local/share/themes
+	cp -r themes/I3\ Dex $HOME/.local/share/themes 1> /dev/null 2> /dev/null
 
 echo -e "\e[33m\e[1m==> \e[39m\e[1mDeseja instalar os pacotes extras?\e[0m"
 if pergunta "S - Para sim || N - Para não ----" S; then
@@ -109,7 +109,7 @@ if pergunta "S - Para sim || N - Para não ----" S; then
 fi
 
 echo -e "\e[33m\e[1m==> \e[39m\e[1mRemover configuração do desenvolvedor? RECOMENDADO PARA TOTAL FUNCIONAMENTO!\e[0m"
-if pergunta "S - Para sim || N - Para não ----" S; then
+if pergunta "Para remover pressione - S || Para manter pressione - N ----" S; then
 	# Remover arquivos do desenvolvedor
 	sudo rm -dR .config/scripts/desenvolvedor
 fi

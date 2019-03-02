@@ -46,7 +46,7 @@ echo -e "\e[33m\e[1m==> \e[39m\e[1mCopiando arquivos\e[0m"
 	notify-send "Cópia concluída"
 
 echo -e "\e[33m\e[1m==> \e[39m\e[1mDeseja fazer upload para o GitHub?\e[0m"
-if pergunta "S - Para sim || N - Para não ----" S; then
+if pergunta "Para fazer upload pressione - S || Para cancelar upload pressione - N ----" S; then
 	cd $HOME/GitHub/i3-dex
 	git add --all
 	git commit

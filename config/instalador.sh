@@ -102,10 +102,10 @@ echo -e "\e[33m\e[1m==> \e[39m\e[1mInstalando configuração\e[0m"
 echo -e "\e[33m\e[1m==> \e[39m\e[1mDeseja instalar os pacotes extras?\e[0m"
 if pergunta "S - Para sim || N - Para não ----" S; then
 	# Pacotes extras com o pacman
-	sudo pacman -S --needed --noconfirm blender frei0r-plugins gimp inkscape kdenlive krita libreoffice-fresh libreoffice-fresh-pt-br lxappearance rawtherapee rhythmbox thunderbird
+	sudo pacman -S --needed --noconfirm blender frei0r-plugins gimp inkscape kdenlive krita libreoffice-fresh libreoffice-fresh-pt-br lxappearance rawtherapee rhythmbox
 
 	# Pacotes extras com o yay
-	yay -S --needed --noconfirm discord telegram-desktop visual-studio-code-bin
+	yay -S --needed --noconfirm discord mailspring telegram-desktop visual-studio-code-bin
 fi
 
 echo -e "\e[33m\e[1m==> \e[39m\e[1mRemover configuração do desenvolvedor? RECOMENDADO PARA TOTAL FUNCIONAMENTO!\e[0m"

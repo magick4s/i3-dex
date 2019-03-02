@@ -177,7 +177,7 @@ for_window [class="Termite"] floating enable, resize set 1200 500, border pixel 
 # Workspace
 assign [class="(Termite|Code)"] $ws1
 assign [class="(Firefox)"] $ws2
-assign [class="(Thunderbird)"] $ws3
+assign [class="(Mailspring)"] $ws3
 assign [class="(Pqiv|pqiv)"] $ws4
 assign [class="(mpv|Rhythmbox)"] $ws5
 assign [class="(Telegram|discord)"] $ws6

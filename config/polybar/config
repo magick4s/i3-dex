@@ -36,7 +36,6 @@ som = #d2d9f3
 voltar = #d2d9f3
 tocar-parar = #d2d9f3
 avancar = #d2d9f3
-musica = #d2d9f3
 janela = #d2d9f3
 cpu = #d2d9f3
 memoria = #d2d9f3
@@ -233,15 +232,6 @@ content = 
 content-padding = 2
 content-foreground = ${cores.avancar}
 click-left = playerctl next
-
-################ Música
-[module/musica]
-type = custom/script
-label = %output%
-label-padding = 2
-label-foreground = ${cores.musica}
-label-maxlen = 50
-exec = $HOME/.config/scripts/musica.sh
 
 # Janela
 [module/janela]

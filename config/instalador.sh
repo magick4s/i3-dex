@@ -87,8 +87,15 @@ echo -e "\e[33m\e[1m==> \e[39m\e[1mInstalando configuração\e[0m"
 	git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 	vim -c 'PluginInstall' -c 'qa!'	
 
-	# Configurando o .xinitrc
-	echo "exec i3" > $HOME/.xinitrc
+	# Configurando o Gerenciador de Login
+	git clone --recurse-submodules https://github.com/cylgom/ly.git
+	cd ly
+	make
+	sudo make install
+	sudo systemctl enable ly.service
+	sudo systemctl disable getty@tty2.service
+	cd ..
+	sudo rm -dR ly
 
 	# Copiando fontes
 	cp -r feather.ttf $HOME/.local/share/fonts/ 1> /dev/null 2> /dev/null

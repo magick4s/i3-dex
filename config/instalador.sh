@@ -72,7 +72,7 @@ echo -e "\e[33m\e[1m==> \e[39m\e[1mFornecendo permissões\e[0m"
 
 echo -e "\e[33m\e[1m==> \e[39m\e[1mMedidas de segurança\e[0m"
 	# Removendo arquivos da $HOME
-	sudo rm -dR $HOME/{.vim,.vimrc,.xinitrc} 1> /dev/null 2> /dev/null
+	sudo rm -dR $HOME/{.vim,.vimrc} 1> /dev/null 2> /dev/null
     
 	# Removendo arquivos da .config
 	sudo rm -dR $HOME/.config/{instalador.sh,compton,dunst,gtk-3.0,i3,neofetch,polybar,ranger,rofi,scripts,termite,wallpaper} 1> /dev/null 2> /dev/null
@@ -111,7 +111,7 @@ echo -e "\e[33m\e[1m==> \e[39m\e[1mInstalando configuração\e[0m"
 
 echo -e "\e[33m\e[1m==> \e[39m\e[1mDeseja instalar os pacotes extras?\e[0m"
 if pergunta "S - Para sim || N - Para não ----" S; then
-	# Instalando pacotes extras	
+	# Instalando pacotes extras
 fi
 
 echo -e "\e[33m\e[1m==> \e[39m\e[1mFinalizando\e[0m"

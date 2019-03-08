@@ -31,7 +31,7 @@ echo -e "\e[33m\e[1m==> \e[39m\e[1mOlá "$USER".\e[0m"
 
 echo -e "\e[33m\e[1m==> \e[39m\e[1mInstalando pacotes essenciais\e[0m"
 	# Básico para o funcionamento do sistema
-	sudo pacman -S --needed --noconfirm alsa-utils breeze-icons compton ffmpeg firefox git go gvfs hsetroot i3-gaps maim mpv networkmanager playerctl pulseaudio pulseaudio-alsa rofi termite thunar thunar-volman ttf-dejavu ttf-fira-mono ttf-fira-sans vim w3m xorg-server xorg-xinit xorg-xrandr
+	sudo pacman -S --needed --noconfirm alsa-utils compton ffmpeg git go hsetroot i3-gaps maim mpv networkmanager playerctl pulseaudio pulseaudio-alsa rofi termite ttf-dejavu ttf-fira-mono ttf-fira-sans vim w3m xorg-server xorg-xinit xorg-xrandr
 
 	# Instalando yay
 	git clone https://aur.archlinux.org/yay.git
@@ -41,7 +41,7 @@ echo -e "\e[33m\e[1m==> \e[39m\e[1mInstalando pacotes essenciais\e[0m"
 	sudo rm -dR yay
 
 	# Pacotes Instalados com yay
-	yay -S --needed --noconfirm polybar pqiv
+	yay -S --needed --noconfirm google-chrome polybar pqiv
 
 echo -e "\e[33m\e[1m==> \e[39m\e[1mHabilitando serviços\e[0m"
 	# Serviços
@@ -79,6 +79,9 @@ echo -e "\e[33m\e[1m==> \e[39m\e[1mMedidas de segurança\e[0m"
 
 	# Removendo os temas
 	sudo rm -dR $HOME/.local/share/themes/I3\ Dex 1> /dev/null 2> /dev/null
+	
+	# Removendo arquivos de desenvolvedor
+	sudo rm -dR $HOME/.config/scripts/desenvolvedor/dev.sh
 
 echo -e "\e[33m\e[1m==> \e[39m\e[1mInstalando configuração\e[0m"
 	# Configurando o vim
@@ -108,17 +111,7 @@ echo -e "\e[33m\e[1m==> \e[39m\e[1mInstalando configuração\e[0m"
 
 echo -e "\e[33m\e[1m==> \e[39m\e[1mDeseja instalar os pacotes extras?\e[0m"
 if pergunta "S - Para sim || N - Para não ----" S; then
-	# Pacotes extras com o pacman
-	sudo pacman -S --needed --noconfirm blender frei0r-plugins gimp inkscape kdenlive krita libreoffice-fresh libreoffice-fresh-pt-br lxappearance rawtherapee rhythmbox
-
-	# Pacotes extras com o yay
-	yay -S --needed --noconfirm discord mailspring telegram-desktop visual-studio-code-bin
-fi
-
-echo -e "\e[33m\e[1m==> \e[39m\e[1mRemover configuração do desenvolvedor? RECOMENDADO PARA TOTAL FUNCIONAMENTO!\e[0m"
-if pergunta "Para remover pressione - S || Para manter pressione - N ----" S; then
-	# Remover arquivos do desenvolvedor
-	sudo rm -dR .config/scripts/desenvolvedor
+	# Instalando pacotes extras	
 fi
 
 echo -e "\e[33m\e[1m==> \e[39m\e[1mFinalizando\e[0m"

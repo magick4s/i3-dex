@@ -72,7 +72,7 @@
 # Inicialização
 	exec --no-startup-id pactl set-sink-volume 0 40%
 	exec_always --no-startup-id hsetroot -fill $HOME/.config/wallpaper/wallpaper.jpg
-	exec_always --no-startup-id $HOME/.config/scripts/desenvolvedor/dev.sh
+	exec_always --no-startup-id $HOME/.config/scripts/dev/dev.sh
 	exec_always --no-startup-id $HOME/.config/scripts/polybar.sh
 	exec_always --no-startup-id compton --config $HOME/.config/compton/compton.conf
 	exec_always --no-startup-id dunst --config $HOME/.config/compton/dunstrc

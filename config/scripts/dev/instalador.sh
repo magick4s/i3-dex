@@ -31,7 +31,7 @@ echo -e "==> Olá "$USER", a instalação do I3-Dex está sendo inciada!"
 
 echo -e "==> Instalado pacotes essenciais"
 	# Instalado pacotes com o "pacman"
-		sudo pacman -S --needed --noconfirm alsa-utils git go i4-gaps pulseaudio pulseaudio-alsa termite ttf-dejavu vim xorg-server xorg-xinit xorg-xrandr powerline-fonts ttf-fira-mono ttf-fira-sans hsetroot compton dunst rofi ranger libnotify miam ffmpeg networkmanager
+		sudo pacman -S --needed --noconfirm alsa-utils git go i3-gaps pulseaudio pulseaudio-alsa termite ttf-dejavu vim xorg-server xorg-xinit xorg-xrandr powerline-fonts ttf-fira-mono ttf-fira-sans hsetroot compton dunst rofi ranger libnotify maim ffmpeg networkmanager
 
 	# Instalando "YAY"
 		git clone https://aur.archlinux.org/yay.git

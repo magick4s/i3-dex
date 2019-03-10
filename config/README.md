@@ -22,11 +22,13 @@
 ## ⚙ 5° Passo: Novamente, deixe o teclado em pt_BR:
 ```sudo loadkeys br-abnt2```
 
-## ⚙ 6° Passo: Execute o script de instalação e depois reinicie o sistema:
-```bash <(curl -s https://raw.githubusercontent.com/jirrezdex/i3-dex/master/config/instalador.sh)```  
-```reboot```
+## ⚙ 6° Passo: Habilite conexão com a internet:
+```sudo systemctl enable dhcpcd.service```  
+```sudo systemctl start dhcpcd```
 
-##### Sistema de login: Digite seu usuário e senha, após ter feito isto, dê "startx"
+## ⚙ 7° Passo: Execute o script de instalação e depois reinicie o sistema:
+```bash <(curl -s https://raw.githubusercontent.com/jirrezdex/i3-dex/master/config/scripts/dev/instalador.sh)```  
+```reboot```
 
 ## ⚙ Passos adicionais:
 ### Teclado pt-br

@@ -49,13 +49,13 @@
 # Áreas de lançamento
 	assign [class="(Termite)"] $ws1
 	assign [class="(Google-chrome)"] $ws2
-	assign [class="()"] $ws3
-	assign [class="()"] $ws4
-	assign [class="()"] $ws5
-	assign [class="()"] $ws6
-	assign [class="()"] $ws7
-	assign [class="()"] $ws8
-	assign [class="()"] $ws9
+	assign [class="(Pqiv)"] $ws3
+	assign [class="(mpv)"] $ws4
+	assign [class="(Telegram)"] $ws5
+	assign [class="(Gimp|Blender|Inkscape)"] $ws6
+	assign [class="(libreoffice-startcenter|libreoffice-writer|libreoffice-draw|libreoffice-presentation|libreoffice-impress|libreoffice-calc)"] $ws7
+	assign [class="(Thunderbird)"] $ws8
+	assign [class="(Steam)"] $ws9
 	assign [class="()"] $ws10
 
 # Controle de volume

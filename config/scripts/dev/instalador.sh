@@ -31,7 +31,7 @@ echo -e "==> Olá "$USER", a instalação do I3-Dex está sendo inciada!"
 
 echo -e "==> Instalado pacotes essenciais"
 	# Instalado pacotes com o "pacman"
-		sudo pacman -S --needed --noconfirm alsa-utils git go i3-gaps pulseaudio pulseaudio-alsa termite ttf-dejavu vim xorg-server xorg-xinit xorg-xrandr powerline-fonts ttf-fira-mono ttf-fira-sans hsetroot compton dunst rofi ranger libnotify maim ffmpeg networkmanager w3m mpv
+		sudo pacman -S --needed --noconfirm alsa-utils git go i3-gaps pulseaudio pulseaudio-alsa termite ttf-dejavu vim xorg-server xorg-xinit xorg-xrandr powerline-fonts ttf-fira-mono ttf-fira-sans hsetroot compton dunst rofi ranger libnotify maim ffmpeg networkmanager w3m mpv gimp blender inkscape thunderbird libreoffice-fresh libreoffice-fresh-pt-br
 
 	# Instalando "YAY"
 		git clone https://aur.archlinux.org/yay.git
@@ -41,7 +41,7 @@ echo -e "==> Instalado pacotes essenciais"
 		sudo rm -dR yay
 
 	# Instalado pacotes com o "YAY"
-		yay -S --needed --noconfirm google-chrome polybar nerd-fonts-source-code-pro pqiv
+		yay -S --needed --noconfirm google-chrome polybar nerd-fonts-source-code-pro pqiv telegram-desktop
 
 	# Instalando gerenciador de login "LY"
 		git clone --recurse-submodules https://github.com/cylgom/ly.git

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# jirrezdex@gmail.com
 # Jirrez Matheus
+# jirrezdex@gmail.com
 
 if [ -f $HOME/.config/user-dirs.dirs ]; then
 	source $HOME/.config/user-dirs.dirs
@@ -8,7 +8,6 @@ if [ -f $HOME/.config/user-dirs.dirs ]; then
 else
 	dir="${HOME}/Imagens/Screenshots/"
 fi
-
 app="maim"
 params="-u"
 data=$(date +%Y-%m-%d--%H-%M-%S)
@@ -17,25 +16,18 @@ extensao=".png"
 atraso=10
 tipo="image/png"
 titulo="."
-
 [ ! -d $dir ] && mkdir -p $dir
-
 command -v $app >/dev/null 2>&1 || {
 	msg="O aplicativo $app não está instalado" 
-
 	command -v notify-send >/dev/null 2>&1 && {
 		notify-send "ERRO" "$msg";
 	} || {
 		echo $msg;
 	}
-
 	exit 1;
 }
-
 if [ "$1" == "-c" ]; then
-
 	exit 0
-
 elif [ "$1" == "-w" ]; then
 	params="$params -w"
 	arquivo="${nome}-window${extensao}"
@@ -61,13 +53,11 @@ else
 	$app $params ${arquivo}
 	msg="Imagens/Screenshots/$arquivo"
 fi
-
 if [ ! -z $arquivo ]; then
 	if [ $(pwd) != $dir ]; then
 		mv $arquivo $dir
 	fi
 	xclip -selection c -t $tipo -i $dir$arquivo
 fi
-
 notify-send -i $titulo "Captura realizada" "$msg"
 exit 0

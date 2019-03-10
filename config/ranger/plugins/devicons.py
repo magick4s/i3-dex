@@ -1,10 +1,7 @@
 #!/usr/bin/python
-# jirrezdex@gmail.com
-# Jirrez Matheus
-
+# coding=UTF-8
 import re;
 import os;
-
 file_node_extensions = {
     '7z'       : '',
     'ai'       : '',
@@ -80,7 +77,7 @@ file_node_extensions = {
     'ml'       : 'λ',
     'mli'      : 'λ',
     'mov'      : '',
-    'mp3'      : '',
+    'mp3'      : '',
     'mp4'      : '',
     'mpeg'     : '',
     'mpg'      : '',
@@ -129,6 +126,7 @@ file_node_extensions = {
 }
 
 dir_node_exact_matches = {
+# Português
     'Documentos'                       : '',
     'Imagens'                          : '',
     'Modelos'                          : '',

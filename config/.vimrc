@@ -40,5 +40,5 @@ let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 
 " Markdown Preview
-let vim_markdown_preview_browser='Firefox'
+let vim_markdown_preview_browser='google-chrome'
 let vim_markdown_preview_github=1

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# jirrezdex@gmail.com
 # Jirrez Matheus
+# jirrezdex@gmail.com
 
 controle=$(echo "-Sair;-Reiniciar;-Desligar" | rofi -sep ";" -dmenu -p "Controle do sistema" -bw 4 -separator-style none -location 0 -width 30 -lines 3 -padding 40)
 if [ ! -z $controle ]; then

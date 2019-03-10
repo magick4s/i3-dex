@@ -1,6 +1,3 @@
-# jirrezdex@gmail.com
-# Jirrez Matheus
-
 import ranger.api
 from ranger.core.linemode import LinemodeBase
 from plugins.devicons import *

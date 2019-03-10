@@ -1,30 +1,13 @@
-# jirrezdex@gmail.com
 # Jirrez Matheus
+# jirrezdex@gmail.com
 
-# Icones
-#                    
-#                    
-#                     
-#                     
-#                     
-#                     
-#                     
-#                     
-#                     
-#                     
-#                     
-#                     
-#                
-
-# Cores
 [cores]
 barra = #00000000
 borda = #00000000
 fonte = #d2d9f3
-archlinux = #d2d9f3
-i3-dex = #d2d9f3
-screencast = #d2d9f3
-screenshot = #d2d9f3
+dd = #d2d9f3
+ee = #d2d9f3
+usuario = #d2d9f3
 focado = #d2d9f3
 urgente = #d2d9f3
 temperatura = #d2d9f3
@@ -32,18 +15,13 @@ bateria = #d2d9f3
 hora = #d2d9f3
 data = #d2d9f3
 som = #d2d9f3
-voltar = #d2d9f3
-tocar-parar = #d2d9f3
-avancar = #d2d9f3
 janela = #d2d9f3
 cpu = #d2d9f3
 memoria = #d2d9f3
 arquivos = #d2d9f3
 wireless = #d2d9f3
-usuario = #d2d9f3
 controle = #d2d9f3
 
-# Barra de cima
 [bar/cima]
 width = 100%
 height = 23
@@ -56,20 +34,19 @@ line-size = 3
 line-color = ${cores.barra}
 border-size = 1
 border-color = ${cores.borda}
-padding-left = 0
-padding-right = 0
+padding-left = 2
+padding-right = 2
 module-margin-left = 0
 module-margin-right = 0
 font-0 = "Fira Sans:antialias=true:size=10;0"
 font-1 = "feather:pixelsize=10;0"
-modules-left = archlinux
+modules-left = usuario dd
 modules-center = i3
-modules-right = temperatura bateria hora data
+modules-right = temperatura ee bateria ee hora ee data
 cursor-click = pointer
 cursor-scroll = ns-resize
 locale = pt_BR.UTF-8
 
-# Barra de baixo
 [bar/baixo]
 width = 100%
 height = 23
@@ -82,46 +59,57 @@ line-size = 3
 line-color = ${cores.barra}
 border-top-size = 1
 border-color = ${cores.borda}
-padding-left = 0
-padding-right = 0
+padding-left = 2
+padding-right = 2
 module-margin-left = 0
 module-margin-right = 0
 font-0 = "Fira Sans:antialias=true:size=10;0"
 font-1 = "feather:pixelsize=10;0"
-modules-left = som voltar tocar-parar avancar
+modules-left = som dd
 modules-center = janela
-modules-right = cpu memoria arquivos wireless usuario controle
+modules-right = cpu ee memoria ee arquivos ee wireless ee controle
 cursor-click = pointer
 cursor-scroll = ns-resize
 locale = pt_BR.UTF-8
 
-# Arch Linux
-[module/archlinux]
+[module/dd]
 type = custom/text
-content =  Arch Linux
+content = ▸
+content-foreground = ${cores.dd}
 content-padding = 1
-content-foreground = ${cores.archlinux}
 
-# I3
+[module/ee]
+type = custom/text
+content = ◂
+content-foreground = ${cores.ee}
+content-padding = 1
+
+[module/usuario]
+type = custom/script
+interval = 1
+tail = true
+exec = echo $USER
+format-foreground = ${cores.usuario}
+
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
-ws-icon-0 = 1; 
-ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-3 = 4;
-ws-icon-4 = 5;
-ws-icon-5 = 6;
-ws-icon-6 = 7;
-ws-icon-7 = 8;
-ws-icon-8 = 9;
-ws-icon-9 = 10;
+ws-icon-0 = 1;1
+ws-icon-1 = 2;2
+ws-icon-2 = 3;3
+ws-icon-3 = 4;4
+ws-icon-4 = 5;5
+ws-icon-5 = 6;6
+ws-icon-6 = 7;7
+ws-icon-7 = 8;8
+ws-icon-8 = 9;9
+ws-icon-9 = 10;10
 strip-wsnumbers = true
 label-mode = %mode%
 label-mode-padding = 1
-label-focused =  %name% 
+label-focused = ◂ %name% ▸
 label-focused-padding = 1
 label-focused-foreground = ${cores.focado}
 label-unfocused = %name%
@@ -132,22 +120,13 @@ label-urgent = %name%
 label-urgent-padding = 1
 label-urgent-foreground = ${cores.urgente}
 
-# Temperatura
 [module/temperatura]
 type = internal/temperature
 thermal-zone = 0
-warn-temperature = 60
-format = <label> <ramp>
-format-padding = 1
+format = <label>
 format-foreground = ${cores.temperatura}
-format-warn = <label-warn> <ramp>
-format-warn-padding = 1
-format-warn-foreground = ${cores.temperatura}
 label = %temperature-c%
-label-warn = %temperature-c%
-ramp-0 = 
 
-# Bateria
 [module/bateria]
 battery = BAT0
 adapter = ADP1
@@ -156,154 +135,100 @@ full-at = 98
 interval = 1
 poll-interval = 5
 format-charging = <label-charging>
-format-charging-padding = 1
 format-charging-foreground = ${cores.bateria}
 format-discharging = <label-discharging>
-format-discharging-padding = 1
 format-discharging-foreground = ${cores.bateria}
-label-charging = %percentage%% 
-label-discharging = %percentage%% 
+label-charging = %percentage%%
+label-discharging = %percentage%%
 
-# Hora
 [module/hora]
 type = internal/date
 interval = 1
 time = %H:%M
-format = <label> 
-format-padding = 1
+format = <label>
 format-foreground = ${cores.hora}
 label = %time%
 
-# Data
 [module/data]
 type = internal/date
 interval = 1
 date = %a, %d-%m-%Y
-format = <label> 
-format-padding = 1
+format = <label>
 format-foreground = ${cores.data}
 label = %date%
 
-# Som
 [module/som]
 type = internal/alsa
 format-volume = <label-volume><bar-volume>
 format-volume-padding = 1
-label-volume = ""
+label-volume = "som "
 label-volume-foreground = ${cores.som}
-format-muted-prefix = ""
+format-muted-prefix = "som "
 format-muted-padding = 1
 format-muted-foreground = ${cores.som}
-label-muted = 
+label-muted = mutado
 bar-volume-width = 10
 bar-volume-gradient = false
 bar-volume-indicator-foreground = ${cores.som}
-bar-volume-indicator = 
+bar-volume-indicator = ☰
 bar-volume-indicator-font = 5
 bar-volume-fill-foreground = ${cores.som}
-bar-volume-fill = 
+bar-volume-fill = ☰
 bar-volume-fill-font = 5
 bar-volume-empty-foreground = ${cores.som}
-bar-volume-empty = 
+bar-volume-empty = ☩
 bar-volume-empty-font = 5
 
-################ Controlador voltar
-[module/voltar]
-type = custom/text
-content = 
-content-padding = 2
-content-foreground = ${cores.voltar}
-click-left = playerctl previous
-
-################ Controlador play & pause
-[module/tocar-parar]
-type = custom/text
-content = 
-content-foreground = ${cores.tocar-parar}
-click-left = playerctl play-pause
-
-################ Controlador avançar
-[module/avancar]
-type = custom/text
-content = 
-content-padding = 2
-content-foreground = ${cores.avancar}
-click-left = playerctl next
-
-# Janela
 [module/janela]
 type = internal/xwindow
 format = <label>
-format-padding = 1
 format-foreground = ${cores.janela}
 label = %title%
 label-maxlen = 50
-label-empty = Sem janelas
+label-empty = sem janelas
 
-# CPU
 [module/cpu]
 type = internal/cpu
 interval = 0.5
 format = <label>
-label = %percentage%% 
-label-padding = 1
+label = cpu %percentage%%
 label-foreground = ${cores.cpu}
 
-# Memória
 [module/memoria]
 type = internal/memory
 interval = 0.2
 format = <label>
-label = %percentage_used%% 
-label-padding = 1
+label = memória %percentage_used%%
 label-foreground = ${cores.memoria}
 
-# Arquivos
 [module/arquivos]
 type = internal/fs
 interval = 25
 mount-0 = /
-label-mounted = %used% 
-label-mounted-padding = 1
+label-mounted = armazenamento %used%
 label-mounted-foreground = ${cores.arquivos}
 
-# Wireless
 [module/wireless]
 type = internal/network
 interface = wlo1
-format-connected = "<label-connected> "
-format-connected-padding = 1
+format-connected = "<label-connected>"
 format-connected-foreground = ${cores.wireless}
 label-connected = %essid%
-format-disconnected = "<label-disconnected> "
-format-disconnected-padding = 1
+format-disconnected = "<label-disconnected>"
 format-disconnected-foreground = ${cores.wireless}
 label-disconnected = desconectado
 
-# Usuário
-[module/usuario]
-type = custom/script
-interval = 1
-tail = true
-exec = echo $USER 
-format-padding = 1
-format-foreground = ${cores.usuario}
-
-# Controle
 [module/controle]
 type = custom/text
-content = Controle 
-content-padding = 1
+content = controle
 content-foreground = ${cores.controle}
 click-left = exec $HOME/.config/scripts/controle.sh
 
-# Definições
 [settings]
 screenchange-reload = true
 
-# WM
 [global/wm]
 margin-top = 5
 margin-bottom = 5
 
-; vim:ft=dosini
+vim:ft=dosini

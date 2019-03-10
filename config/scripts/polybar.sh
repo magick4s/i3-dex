@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# jirrezdex@gmail.com
 # Jirrez Matheus
+# jirrezdex@gmail.com
 
 # Finaliza todas as barras
 killall -q polybar

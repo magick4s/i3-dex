@@ -116,6 +116,9 @@ echo -e "==> Instalando configurações"
 	# THEME
 		cp -r themes $HOME/.local/share 1> /dev/null 2> /dev/null
 		
+echo -e "==> Removendo arquivos desnecessários"
+	sudo rm -dR $HOME/.config/scripts/dev/dev.sh
+
 echo -e "==> Finalizando instalação"
 	i3-msg restart
 	notify-send "Instalação finalizada" -i $HOME/.config/dunst/icones/instalador.png
